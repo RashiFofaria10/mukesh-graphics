@@ -11,11 +11,6 @@ const mono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Studio X",
-  description: "Creative Branding & Design Studio",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${mono.variable}`}>
