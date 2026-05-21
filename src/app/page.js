@@ -53,7 +53,7 @@ export default function Page() {
       setScrollY(window.scrollY);
       const hit = NAV.map(id => document.getElementById(id.replace(" ", "-")))
         .filter(Boolean)
-        .findLast(el => el.getBoundingClientRect().top <= 150);
+        .findLast(el => el && el.getBoundingClientRect().top <= 150);
       if (hit) setActiveSection(hit.id.replace("-", " "));
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -85,7 +85,6 @@ export default function Page() {
           --gray: #4b5563;
           --light-gray: #f3f4f6;
           --white: #ffffff;
-          --blue: #2563eb;
         }
 
         /* Buttons */
@@ -150,7 +149,7 @@ export default function Page() {
       {/* 🧭 NAVIGATION */}
       <header style={{
         position: "fixed", top: 0, left: 0, width: "100%", zIndex: 1000,
-        backgroundColor: var(--white),
+        backgroundColor: "var(--white)",
         borderBottom: isScrolled ? "1px solid #e5e7eb" : "1px solid transparent",
         transition: "all 0.2s ease", padding: "16px 0"
       }}>
@@ -200,7 +199,7 @@ export default function Page() {
         </div>
       )}
 
-      {/* 🎯 HERO SECTION (Minimal & Bright) */}
+      {/* 🎯 HERO SECTION */}
       <section id="home" style={{ paddingTop: "140px", paddingBottom: "80px", backgroundColor: "var(--white)" }}>
         <div className="container grid-2" style={{ alignItems: "center" }}>
           <div style={{ paddingRight: "4vw" }}>
@@ -237,7 +236,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ✨ WHY CHOOSE US (Features) */}
+      {/* ✨ WHY CHOOSE US */}
       <section id="why-us" className="section-padding" style={{ backgroundColor: "var(--light-gray)" }}>
         <div className="container">
           <div className="section-header" style={{ textAlign: "center", margin: "0 auto 60px auto" }}>
@@ -292,7 +291,7 @@ export default function Page() {
                 <div style={{ height: "260px", overflow: "hidden" }}>
                   <img src={srv.img} alt={srv.title} />
                 </div>
-                <div style={{ padding: "30px" }}>
+                <div style={{ padding: "30px", backgroundColor: "var(--white)" }}>
                   <h3 className="font-heading" style={{ fontSize: "20px", marginBottom: "12px" }}>{srv.title}</h3>
                   <p className="text-body" style={{ fontSize: "15px", marginBottom: "24px" }}>{srv.desc}</p>
                   <a href={CONTACT_URL} target="_blank" rel="noopener" style={{ color: "var(--black)", fontWeight: "500", textDecoration: "none", fontSize: "14px", borderBottom: "1px solid var(--black)", paddingBottom: "2px" }}>
@@ -305,7 +304,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 🤝 CLIENTS & TESTIMONIALS (Minimal light theme) */}
+      {/* 🤝 CLIENTS & TESTIMONIALS */}
       <section id="clients" className="section-padding" style={{ backgroundColor: "var(--light-gray)" }}>
         <div className="container">
           
@@ -321,7 +320,7 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Testimonials - Clean Cards */}
+          {/* Testimonials */}
           <div className="section-header" style={{ textAlign: "center", margin: "0 auto 60px auto" }}>
             <h2 className="title">Client Testimonials</h2>
           </div>
@@ -340,7 +339,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 📞 PROMINENT CONTACT SECTION */}
+      {/* 📞 CONTACT */}
       <section id="contact" className="section-padding" style={{ backgroundColor: "var(--white)" }}>
         <div className="container grid-2">
           
@@ -408,3 +407,4 @@ export default function Page() {
     </main>
   );
 }
+10:28 PM
