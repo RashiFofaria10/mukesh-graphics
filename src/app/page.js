@@ -1,424 +1,241 @@
 "use client";
 
-export default function HomePage() {
+export default function Page() {
   return (
     <main className="bg-[#f7f8fa] text-[#111] overflow-hidden">
 
       {/* NAVBAR */}
-
       <header className="fixed top-5 left-0 w-full z-50 flex justify-center px-4">
+        <div className="w-full max-w-7xl bg-white/70 backdrop-blur-xl border shadow-xl rounded-full px-8 py-5 flex items-center justify-between">
 
-        <div className="w-full max-w-7xl bg-white/60 backdrop-blur-xl border border-white/40 shadow-2xl rounded-full px-8 py-5 flex items-center justify-between">
+          <h1 className="text-2xl font-black">Mukesh Graphics</h1>
 
-          <h1 className="text-2xl font-black">
-            Mukesh Graphics
-          </h1>
-
-          <nav className="hidden md:flex gap-8 font-semibold text-sm">
-
+          <nav className="hidden md:flex gap-8 text-sm font-semibold text-gray-700">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio">Work</a>
             <a href="#clients">Clients</a>
             <a href="#contact">Contact</a>
-
           </nav>
 
           <a
             href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:scale-105 transition cursor-pointer"
+            className="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:scale-105 transition"
           >
-            Book Service
+            Book Now
           </a>
 
         </div>
-
       </header>
 
       {/* HERO */}
-
-      <section
-        id="home"
-        className="min-h-screen flex items-center px-6 pt-36"
-      >
-
+      <section id="home" className="min-h-screen flex items-center px-6 pt-36">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
 
           <div>
-
-            <p className="uppercase tracking-[5px] text-gray-500 font-semibold mb-6">
-              PREMIUM PRINTING & PACKAGING
+            <p className="uppercase tracking-[6px] text-gray-500 mb-6">
+              Premium Printing Studio
             </p>
 
             <h1 className="text-6xl md:text-8xl font-black leading-[1.05] mb-8 bg-gradient-to-r from-black to-gray-500 text-transparent bg-clip-text">
-              Luxury Packaging Experiences
+              Luxury Packaging Design
             </h1>
 
-            <p className="text-xl text-gray-600 leading-relaxed mb-10">
-              Mukesh Graphics delivers elegant packaging, offset printing and branding solutions with modern aesthetics and industrial precision.
+            <p className="text-xl text-gray-600 mb-10">
+              We build premium packaging, branding systems and industrial print solutions for modern brands.
             </p>
 
-            <div className="flex gap-5 flex-wrap">
-
-              <a
-                href="#portfolio"
-                className="bg-black text-white px-8 py-5 rounded-full font-semibold hover:scale-105 transition"
-              >
-                Explore Work
-              </a>
-
-              <a
-                href="#contact"
-                className="bg-white border border-black/10 px-8 py-5 rounded-full font-semibold hover:bg-gray-100 transition"
-              >
-                Contact Us
-              </a>
-
-            </div>
-
+            <a href="#services" className="bg-black text-white px-8 py-5 rounded-full font-semibold">
+              Explore Services
+            </a>
           </div>
 
-          <div className="relative">
-
-            <img
-              src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1200&auto=format&fit=crop"
-              alt="hero"
-              className="rounded-[40px] shadow-2xl h-[700px] object-cover"
-            />
-
-            <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-[30px] shadow-2xl">
-
-              <h3 className="text-5xl font-black mb-2">
-                15+
-              </h3>
-
-              <p className="text-gray-600">
-                Years Experience
-              </p>
-
-            </div>
-
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=1800&auto=format&fit=crop"
+            className="rounded-[40px] shadow-2xl h-[720px] object-cover"
+          />
 
         </div>
-
       </section>
 
       {/* ABOUT */}
-
-      <section
-        id="about"
-        className="py-40 px-6 bg-white"
-      >
-
+      <section id="about" className="py-40 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
 
           <div className="grid grid-cols-2 gap-6">
 
             <img
-              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
-              className="rounded-[35px] h-[500px] object-cover shadow-xl"
+              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop"
+              className="rounded-[35px] h-[520px] object-cover shadow-xl"
             />
 
             <img
-              src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=1200&auto=format&fit=crop"
-              className="rounded-[35px] h-[500px] object-cover shadow-xl mt-20"
+              src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=1600&auto=format&fit=crop"
+              className="rounded-[35px] h-[520px] object-cover shadow-xl mt-20"
             />
 
           </div>
 
           <div>
-
-            <p className="uppercase tracking-[5px] text-gray-500 font-semibold mb-5">
-              ABOUT US
+            <p className="uppercase tracking-[6px] text-gray-500 mb-5">
+              About Us
             </p>
 
-            <h2 className="text-5xl font-black mb-8 leading-tight">
-              Elegant Printing With Precision Craftsmanship
+            <h2 className="text-5xl font-black mb-8">
+              Precision Craftsmanship for Modern Brands
             </h2>
 
-            <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Mukesh Graphics specializes in luxury mono cartons, FMCG packaging, pharmaceutical printing and premium offset solutions.
+            <p className="text-xl text-gray-600 mb-8">
+              Mukesh Graphics delivers luxury packaging, FMCG branding, pharmaceutical printing and premium design solutions.
             </p>
 
             <div className="space-y-5">
 
-              <div className="bg-[#f7f8fa] rounded-[25px] p-6 shadow-lg">
-                <h3 className="text-2xl font-black mb-2">
-                  Modern Infrastructure
-                </h3>
-                <p className="text-gray-600">
-                  Advanced machinery and industrial-grade printing technology.
-                </p>
+              <div className="bg-[#f7f8fa] p-6 rounded-[25px] shadow-lg">
+                <h3 className="text-2xl font-black mb-2">Modern Machines</h3>
+                <p className="text-gray-600">Advanced German & Japanese printing systems.</p>
               </div>
 
-              <div className="bg-[#f7f8fa] rounded-[25px] p-6 shadow-lg">
-                <h3 className="text-2xl font-black mb-2">
-                  Premium Finishing
-                </h3>
-                <p className="text-gray-600">
-                  Luxury finishing techniques with precision packaging quality.
-                </p>
+              <div className="bg-[#f7f8fa] p-6 rounded-[25px] shadow-lg">
+                <h3 className="text-2xl font-black mb-2">Luxury Finishing</h3>
+                <p className="text-gray-600">Foil, embossing, UV & premium detailing.</p>
               </div>
 
             </div>
-
           </div>
 
         </div>
-
       </section>
 
       {/* SERVICES */}
+      <section id="services" className="py-40 px-6">
 
-      <section
-        id="services"
-        className="py-40 px-6"
-      >
-
-        <div className="max-w-7xl mx-auto">
-
-          <div className="text-center mb-20">
-
-            <p className="uppercase tracking-[5px] text-gray-500 font-semibold mb-5">
-              SERVICES
-            </p>
-
-            <h2 className="text-5xl font-black">
-              What We Offer
-            </h2>
-
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-10">
-
-            {[
-              {
-                title: "Packaging",
-                image:
-                  "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1200&auto=format&fit=crop",
-              },
-              {
-                title: "Offset Printing",
-                image:
-                  "https://images.unsplash.com/photo-1586880244406-556ebe35f282?q=80&w=1200&auto=format&fit=crop",
-              },
-              {
-                title: "Branding",
-                image:
-                  "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=1200&auto=format&fit=crop",
-              },
-            ].map((service) => (
-              <div
-                key={service.title}
-                className="bg-white rounded-[35px] overflow-hidden shadow-xl hover:-translate-y-3 transition duration-500"
-              >
-
-                <img
-                  src={service.image}
-                  className="h-[300px] w-full object-cover"
-                />
-
-                <div className="p-8">
-
-                  <h3 className="text-3xl font-black mb-4">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-gray-600 text-lg">
-                    Premium industrial solutions crafted for modern brands.
-                  </p>
-
-                </div>
-
-              </div>
-            ))}
-
-          </div>
-
+        <div className="max-w-7xl mx-auto text-center mb-20">
+          <p className="uppercase tracking-[6px] text-gray-500 mb-5">
+            Services
+          </p>
+          <h2 className="text-5xl font-black">What We Offer</h2>
         </div>
 
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+
+          {[
+            {
+              title: "Luxury Packaging",
+              img: "https://images.unsplash.com/photo-1622554665555-1e9c3b6f2a8f?q=80&w=1800&auto=format&fit=crop",
+            },
+            {
+              title: "Offset Printing",
+              img: "https://images.unsplash.com/photo-1616627561836-6f2f1f5c3a51?q=80&w=1800&auto=format&fit=crop",
+            },
+            {
+              title: "Brand Identity",
+              img: "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1800&auto=format&fit=crop",
+            },
+          ].map((s) => (
+            <div key={s.title} className="bg-white rounded-[35px] shadow-xl overflow-hidden hover:-translate-y-3 transition">
+
+              <img src={s.img} className="h-[340px] w-full object-cover" />
+
+              <div className="p-8">
+                <h3 className="text-3xl font-black mb-4">{s.title}</h3>
+                <p className="text-gray-600">
+                  Premium industrial solutions crafted for global brands.
+                </p>
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+      </section>
+
+      {/* PORTFOLIO */}
+      <section id="portfolio" className="py-40 px-6 bg-white">
+
+        <div className="max-w-7xl mx-auto text-center mb-20">
+          <h2 className="text-5xl font-black">Our Work</h2>
+        </div>
+
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+
+          {[
+            "https://images.unsplash.com/photo-1520975916090-3105956dac38",
+            "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+            "https://images.unsplash.com/photo-1526481280695-3c687fd5432c",
+            "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+          ].map((img) => (
+            <img
+              key={img}
+              src={img}
+              className="rounded-[30px] shadow-xl h-[350px] object-cover"
+            />
+          ))}
+
+        </div>
       </section>
 
       {/* CLIENTS */}
+      <section id="clients" className="py-40 px-6">
 
-      <section
-        id="clients"
-        className="py-40 px-6 bg-white"
-      >
-
-        <div className="max-w-7xl mx-auto text-center">
-
-          <p className="uppercase tracking-[5px] text-gray-500 font-semibold mb-5">
-            TRUSTED BY
-          </p>
-
-          <h2 className="text-5xl font-black mb-20">
-            Our Clients
-          </h2>
-
-          <div className="grid md:grid-cols-4 gap-8">
-
-            {[
-              "Sun Pharma",
-              "Torrent Pharma",
-              "Zydus",
-              "Amul",
-              "Cadbury",
-              "Nestlé",
-              "Cipla",
-              "Ajanta Pharma",
-            ].map((client) => (
-              <div
-                key={client}
-                className="bg-[#f7f8fa] rounded-[30px] p-12 shadow-lg text-2xl font-black hover:-translate-y-2 transition"
-              >
-                {client}
-              </div>
-            ))}
-
-          </div>
-
+        <div className="max-w-7xl mx-auto text-center mb-20">
+          <h2 className="text-5xl font-black">Trusted By</h2>
         </div>
 
+        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+
+          {["Sun Pharma", "Zydus", "Cipla", "Nestlé", "Amul", "Cadbury", "Torrent", "Ajanta"].map((c) => (
+            <div key={c} className="bg-white p-10 rounded-[30px] shadow-xl font-black text-center">
+              {c}
+            </div>
+          ))}
+
+        </div>
       </section>
 
-      {/* CONTACT */}
+      {/* CONTACT (FIXED - NOT SIDE BY SIDE) */}
+      <section id="contact" className="py-40 px-6 bg-white">
 
-      <section
-        id="contact"
-        className="py-40 px-6"
-      >
+        <div className="max-w-4xl mx-auto text-center mb-16">
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+          <h2 className="text-5xl font-black mb-6">
+            Let’s Work Together
+          </h2>
 
-          <div>
+          <p className="text-xl text-gray-600">
+            Contact us for luxury packaging and branding solutions.
+          </p>
 
-            <p className="uppercase tracking-[5px] text-gray-500 font-semibold mb-5">
-              CONTACT
-            </p>
+        </div>
 
-            <h2 className="text-5xl font-black mb-8">
-              Let’s Build Something Premium
-            </h2>
+        <div className="max-w-3xl mx-auto bg-[#f7f8fa] p-10 rounded-[35px] shadow-2xl">
 
-            <p className="text-xl text-gray-600 mb-10">
-              Contact Mukesh Graphics for luxury printing and packaging solutions.
-            </p>
-
-            <div className="space-y-5 text-lg text-gray-700">
-
-              <p>📞 +91 9426272081</p>
-              <p>✉ info@mukeshgraphics.com</p>
-              <p>📍 Bhavnagar, Gujarat</p>
-
-            </div>
-
+          <div className="text-center mb-10 text-gray-600">
+            📞 +91 9426272081 <br />
+            ✉ info@mukeshgraphics.com <br />
+            📍 Bhavnagar, Gujarat
           </div>
 
-          <div className="relative">
+          <div className="space-y-4">
 
-            <img
-              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1200&auto=format&fit=crop"
-              className="rounded-[40px] shadow-2xl h-[650px] object-cover"
-            />
+            <input className="w-full p-5 rounded-xl border" placeholder="Name" />
+            <input className="w-full p-5 rounded-xl border" placeholder="Email" />
+            <textarea rows="5" className="w-full p-5 rounded-xl border" placeholder="Message" />
 
-            <div className="absolute bottom-10 left-10 right-10 bg-white/80 backdrop-blur-xl p-8 rounded-[30px] shadow-xl">
-
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full mb-4 p-5 rounded-2xl border border-black/10 outline-none"
-              />
-
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full mb-4 p-5 rounded-2xl border border-black/10 outline-none"
-              />
-
-              <textarea
-                rows="4"
-                placeholder="Your Message"
-                className="w-full mb-4 p-5 rounded-2xl border border-black/10 outline-none"
-              />
-
-              <button className="bg-black text-white px-8 py-4 rounded-full font-semibold w-full">
-                Send Message
-              </button>
-
-            </div>
+            <button className="w-full bg-black text-white py-4 rounded-full font-semibold">
+              Send Message
+            </button>
 
           </div>
 
         </div>
-
       </section>
 
       {/* FOOTER */}
-
-      <footer className="bg-white border-t border-black/10 py-16 px-6">
-
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
-
-          <div>
-
-            <h2 className="text-3xl font-black mb-5">
-              Mukesh Graphics
-            </h2>
-
-            <p className="text-gray-600 leading-relaxed">
-              Premium packaging and printing experiences with modern luxury aesthetics.
-            </p>
-
-          </div>
-
-          <div>
-
-            <h3 className="text-2xl font-black mb-5">
-              Quick Links
-            </h3>
-
-            <div className="space-y-3 text-gray-600">
-
-              <p><a href="#home">Home</a></p>
-              <p><a href="#about">About</a></p>
-              <p><a href="#services">Services</a></p>
-              <p><a href="#contact">Contact</a></p>
-
-            </div>
-
-          </div>
-
-          <div>
-
-            <h3 className="text-2xl font-black mb-5">
-              Contact
-            </h3>
-
-            <div className="space-y-3 text-gray-600">
-
-              <p>📞 +91 9426272081</p>
-              <p>✉ info@mukeshgraphics.com</p>
-              <p>📍 Bhavnagar, Gujarat</p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div className="border-t border-black/10 mt-12 pt-6 text-center text-gray-500">
-          © 2026 Mukesh Graphics. All Rights Reserved.
-        </div>
-
+      <footer className="py-16 text-center bg-white border-t">
+        <h2 className="text-2xl font-black mb-2">Mukesh Graphics</h2>
+        <p className="text-gray-500">© 2026 All Rights Reserved</p>
       </footer>
 
     </main>
