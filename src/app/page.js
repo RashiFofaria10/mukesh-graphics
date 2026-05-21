@@ -1,49 +1,109 @@
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-[#f6f9fc]">
-      <div className="text-center">
+    <main className="bg-[#f6f9fc] overflow-hidden">
 
-        <h1 className="text-6xl font-bold text-[#0b2d57] mb-6">
-          Mukesh Graphics
-        </h1>
+      <section className="min-h-screen flex items-center pt-32 px-6 bg-gradient-to-br from-[#071d45] via-[#0b2d57] to-[#133b6c]">
 
-        <p className="text-2xl text-gray-600 mb-10">
-          Premium Printing & Packaging Solutions
-        </p>
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
 
-        <div className="flex gap-5 justify-center">
+          <div className="text-white">
 
-          <a
-            href="/about"
-            className="bg-orange-500 text-white px-8 py-4 rounded-full font-bold"
-          >
-            About
-          </a>
+            <p className="uppercase tracking-[5px] text-orange-400 font-bold mb-6">
+              PREMIUM PRINTING & PACKAGING
+            </p>
 
-          <a
-            href="/services"
-            className="bg-[#0b2d57] text-white px-8 py-4 rounded-full font-bold"
-          >
-            Services
-          </a>
+            <h1 className="text-6xl md:text-7xl font-black leading-tight mb-8">
+              Transforming Packaging Into Brand Power
+            </h1>
 
-          <a
-            href="/portfolio"
-            className="bg-black text-white px-8 py-4 rounded-full font-bold"
-          >
-            Portfolio
-          </a>
+            <p className="text-xl text-gray-300 leading-relaxed mb-10">
+              Mukesh Graphics delivers high-quality industrial printing, mono cartons, FMCG packaging and pharmaceutical packaging solutions with modern technology.
+            </p>
 
-          <a
-            href="/contact"
-            className="bg-gray-700 text-white px-8 py-4 rounded-full font-bold"
-          >
-            Contact
-          </a>
+            <div className="flex flex-wrap gap-6">
+
+              <a
+                href="/portfolio"
+                className="bg-orange-500 hover:bg-orange-600 transition px-10 py-5 rounded-full text-lg font-bold"
+              >
+                Explore Portfolio
+              </a>
+
+              <a
+                href="/contact"
+                className="border border-white/20 hover:bg-white/10 transition px-10 py-5 rounded-full text-lg font-bold"
+              >
+                Contact Us
+              </a>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <img
+              src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1200&auto=format&fit=crop"
+              alt="printing"
+              className="rounded-[40px] shadow-2xl"
+            />
+
+          </div>
 
         </div>
 
-      </div>
+      </section>
+
+      <section className="py-28 px-6">
+
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+
+          <div className="bg-white rounded-[35px] p-10 shadow-xl text-center">
+
+            <div className="text-6xl mb-6">📦</div>
+
+            <h2 className="text-3xl font-black mb-4">
+              Packaging
+            </h2>
+
+            <p className="text-gray-600 text-lg">
+              Premium industrial packaging solutions.
+            </p>
+
+          </div>
+
+          <div className="bg-white rounded-[35px] p-10 shadow-xl text-center">
+
+            <div className="text-6xl mb-6">🖨️</div>
+
+            <h2 className="text-3xl font-black mb-4">
+              Offset Printing
+            </h2>
+
+            <p className="text-gray-600 text-lg">
+              Advanced high-quality printing solutions.
+            </p>
+
+          </div>
+
+          <div className="bg-white rounded-[35px] p-10 shadow-xl text-center">
+
+            <div className="text-6xl mb-6">🎨</div>
+
+            <h2 className="text-3xl font-black mb-4">
+              Branding
+            </h2>
+
+            <p className="text-gray-600 text-lg">
+              Creative branding and design services.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </main>
   );
 }
