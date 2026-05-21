@@ -1,158 +1,106 @@
-// ===============================
+// =========================================
 // src/app/page.js
-// ===============================
+// =========================================
 
 export default function HomePage() {
   return (
-    <main className="bg-[#f6f9fc] overflow-hidden">
+    <main className="min-h-screen bg-[#f6f9fc] flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-6xl font-black text-[#0b2d57] mb-6">
+          Mukesh Graphics
+        </h1>
 
-      <section className="relative min-h-screen flex items-center pt-32 px-6 bg-gradient-to-br from-[#071d45] via-[#0b2d57] to-[#133b6c]">
+        <p className="text-2xl text-gray-600">
+          Premium Printing & Packaging Solutions
+        </p>
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+        <div className="flex justify-center gap-6 mt-10">
 
-          <div className="text-white">
+          <a
+            href="/about"
+            className="bg-orange-500 text-white px-8 py-4 rounded-full font-bold"
+          >
+            About
+          </a>
 
-            <p className="uppercase tracking-[5px] text-orange-400 font-bold mb-6">
-              PREMIUM PRINTING & PACKAGING
-            </p>
-
-            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8">
-              Transforming Packaging Into Powerful Brand Stories
-            </h1>
-
-            <p className="text-xl text-gray-300 leading-relaxed mb-10">
-              Mukesh Graphics provides innovative printing and packaging solutions with modern technology and industrial excellence.
-            </p>
-
-            <div className="flex flex-wrap gap-6">
-
-              <a
-                href="/portfolio"
-                className="bg-orange-500 hover:bg-orange-600 transition px-10 py-5 rounded-full text-lg font-bold"
-              >
-                Explore Portfolio
-              </a>
-
-              <a
-                href="/contact"
-                className="border border-white/20 hover:bg-white/10 transition px-10 py-5 rounded-full text-lg font-bold"
-              >
-                Contact Us
-              </a>
-
-            </div>
-
-          </div>
-
-          <div>
-
-            <img
-              src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1200&auto=format&fit=crop"
-              alt="printing"
-              className="rounded-[40px] shadow-2xl"
-            />
-
-          </div>
+          <a
+            href="/services"
+            className="bg-[#0b2d57] text-white px-8 py-4 rounded-full font-bold"
+          >
+            Services
+          </a>
 
         </div>
-
-      </section>
-
+      </div>
     </main>
   )
 }
 
 
-// ===============================
+// =========================================
 // src/app/about/page.js
-// ===============================
+// =========================================
 
-export function AboutPage() {
+export default function AboutPage() {
   return (
-    <main className="bg-[#f6f9fc] min-h-screen pt-32 px-6 pb-24">
+    <main className="min-h-screen bg-white flex items-center justify-center px-6">
+      <div className="max-w-4xl text-center">
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+        <h1 className="text-6xl font-black text-[#0b2d57] mb-8">
+          About Mukesh Graphics
+        </h1>
 
-        <div>
-
-          <p className="uppercase tracking-[5px] text-orange-500 font-bold mb-5">
-            ABOUT COMPANY
-          </p>
-
-          <h1 className="text-5xl md:text-7xl font-black text-[#111827] leading-tight mb-8">
-            Innovation Meets Industrial Excellence
-          </h1>
-
-          <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            Mukesh Graphics is a professionally managed printing and packaging company specializing in mono cartons, pharmaceutical boxes and FMCG packaging.
-          </p>
-
-          <p className="text-xl text-gray-600 leading-relaxed">
-            We combine creativity, technology and industrial precision to deliver world-class packaging solutions.
-          </p>
-
-        </div>
-
-        <div>
-
-          <img
-            src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
-            alt="about"
-            className="rounded-[40px] shadow-2xl"
-          />
-
-        </div>
+        <p className="text-2xl text-gray-600 leading-relaxed">
+          Mukesh Graphics is a professionally managed printing and packaging company specializing in mono cartons, pharmaceutical boxes and FMCG packaging solutions.
+        </p>
 
       </div>
-
     </main>
   )
 }
 
 
-// ===============================
+// =========================================
 // src/app/services/page.js
-// ===============================
+// =========================================
 
-export function ServicesPage() {
+export default function ServicesPage() {
   return (
-    <main className="bg-white min-h-screen pt-32 px-6 pb-24">
+    <main className="min-h-screen bg-[#f6f9fc] px-6 py-20">
 
-      <div className="max-w-7xl mx-auto text-center mb-24">
+      <h1 className="text-6xl font-black text-center text-[#0b2d57] mb-20">
+        Our Services
+      </h1>
 
-        <h1 className="text-5xl md:text-7xl font-black text-[#111827] mb-6">
-          Our Services
-        </h1>
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
 
-        <p className="text-xl text-gray-600">
-          Premium printing and packaging solutions
-        </p>
-
-      </div>
-
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-
-        <div className="bg-[#f6f9fc] rounded-[35px] p-10 shadow-xl">
-          <div className="text-6xl mb-8">📦</div>
-          <h2 className="text-3xl font-black mb-5">Packaging Design</h2>
+        <div className="bg-white p-10 rounded-[30px] shadow-xl text-center">
+          <div className="text-6xl mb-6">📦</div>
+          <h2 className="text-3xl font-black mb-4">
+            Packaging Design
+          </h2>
           <p className="text-gray-600 text-lg">
-            Premium packaging solutions for all industries.
+            Creative packaging for premium brands.
           </p>
         </div>
 
-        <div className="bg-[#f6f9fc] rounded-[35px] p-10 shadow-xl">
-          <div className="text-6xl mb-8">🖨️</div>
-          <h2 className="text-3xl font-black mb-5">Offset Printing</h2>
+        <div className="bg-white p-10 rounded-[30px] shadow-xl text-center">
+          <div className="text-6xl mb-6">🖨️</div>
+          <h2 className="text-3xl font-black mb-4">
+            Offset Printing
+          </h2>
           <p className="text-gray-600 text-lg">
-            Advanced printing solutions with vibrant finishing.
+            High-quality industrial printing solutions.
           </p>
         </div>
 
-        <div className="bg-[#f6f9fc] rounded-[35px] p-10 shadow-xl">
-          <div className="text-6xl mb-8">🎨</div>
-          <h2 className="text-3xl font-black mb-5">Custom Branding</h2>
+        <div className="bg-white p-10 rounded-[30px] shadow-xl text-center">
+          <div className="text-6xl mb-6">🎨</div>
+          <h2 className="text-3xl font-black mb-4">
+            Branding
+          </h2>
           <p className="text-gray-600 text-lg">
-            Creative branding and advertising materials.
+            Professional branding and packaging identity.
           </p>
         </div>
 
@@ -163,29 +111,21 @@ export function ServicesPage() {
 }
 
 
-// ===============================
+// =========================================
 // src/app/portfolio/page.js
-// ===============================
+// =========================================
 
-export function PortfolioPage() {
+export default function PortfolioPage() {
   return (
-    <main className="bg-[#f6f9fc] min-h-screen pt-32 px-6 pb-24">
+    <main className="min-h-screen bg-white px-6 py-20">
 
-      <div className="max-w-7xl mx-auto text-center mb-24">
+      <h1 className="text-6xl font-black text-center text-[#0b2d57] mb-20">
+        Our Portfolio
+      </h1>
 
-        <h1 className="text-5xl md:text-7xl font-black text-[#111827] mb-6">
-          Our Portfolio
-        </h1>
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
 
-        <p className="text-xl text-gray-600">
-          Packaging and printing projects
-        </p>
-
-      </div>
-
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-
-        <div className="bg-white rounded-[35px] overflow-hidden shadow-xl">
+        <div className="bg-[#f6f9fc] rounded-[30px] overflow-hidden shadow-xl">
 
           <img
             src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1200&auto=format&fit=crop"
@@ -194,15 +134,50 @@ export function PortfolioPage() {
           />
 
           <div className="p-8">
-
             <h2 className="text-3xl font-black mb-4">
               Mono Cartons
             </h2>
-
             <p className="text-gray-600 text-lg">
-              Premium carton packaging solutions.
+              Premium carton packaging projects.
             </p>
+          </div>
 
+        </div>
+
+        <div className="bg-[#f6f9fc] rounded-[30px] overflow-hidden shadow-xl">
+
+          <img
+            src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?q=80&w=1200&auto=format&fit=crop"
+            alt="portfolio"
+            className="h-[300px] w-full object-cover"
+          />
+
+          <div className="p-8">
+            <h2 className="text-3xl font-black mb-4">
+              Pharma Packaging
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Pharmaceutical packaging solutions.
+            </p>
+          </div>
+
+        </div>
+
+        <div className="bg-[#f6f9fc] rounded-[30px] overflow-hidden shadow-xl">
+
+          <img
+            src="https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=1200&auto=format&fit=crop"
+            alt="portfolio"
+            className="h-[300px] w-full object-cover"
+          />
+
+          <div className="p-8">
+            <h2 className="text-3xl font-black mb-4">
+              FMCG Packaging
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Attractive retail packaging designs.
+            </p>
           </div>
 
         </div>
@@ -214,31 +189,19 @@ export function PortfolioPage() {
 }
 
 
-// ===============================
+// =========================================
 // src/app/contact/page.js
-// ===============================
+// =========================================
 
-export function ContactPage() {
+export default function ContactPage() {
   return (
-    <main className="bg-white min-h-screen pt-32 px-6 pb-24">
+    <main className="min-h-screen bg-[#f6f9fc] flex items-center justify-center px-6">
 
-      <div className="max-w-7xl mx-auto text-center mb-24">
+      <div className="max-w-5xl w-full grid md:grid-cols-2 gap-10">
 
-        <h1 className="text-5xl md:text-7xl font-black text-[#111827] mb-6">
-          Contact Us
-        </h1>
+        <div className="bg-white rounded-[30px] p-10 shadow-xl">
 
-        <p className="text-xl text-gray-600">
-          Let’s connect together
-        </p>
-
-      </div>
-
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
-
-        <div className="bg-[#f6f9fc] rounded-[35px] p-10 shadow-xl">
-
-          <h2 className="text-4xl font-black mb-8">
+          <h2 className="text-4xl font-black mb-8 text-[#0b2d57]">
             Mr Bhupat
           </h2>
 
@@ -247,6 +210,22 @@ export function ContactPage() {
             <p>📞 +91 9426272081</p>
             <p>✉ info@mukeshgraphics.com</p>
             <p>📍 Bhavnagar, Gujarat</p>
+
+          </div>
+
+        </div>
+
+        <div className="bg-white rounded-[30px] p-10 shadow-xl">
+
+          <h2 className="text-4xl font-black mb-8 text-[#0b2d57]">
+            Mr Yagnik
+          </h2>
+
+          <div className="space-y-5 text-xl text-gray-700">
+
+            <p>📞 +91 9825982727</p>
+            <p>✉ sales@mukeshgraphics.com</p>
+            <p>📍 Gujarat Industrial Development Corporation</p>
 
           </div>
 
