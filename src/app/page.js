@@ -24,18 +24,18 @@ export default function Home() {
         <div className="relative z-10 text-center px-6 max-w-6xl">
 
           <p className="uppercase tracking-[8px] text-gray-600 mb-8 text-sm">
-            Creative Digital Studio
+            Premium Printing & Packaging Studio
           </p>
 
           <h1 className="text-6xl sm:text-7xl md:text-8xl font-black leading-[0.95] mb-10 tracking-[-3px]">
-            Build Modern
+            Creative Branding
             <br />
-            Digital Experiences
+            That Feels Premium
           </h1>
 
           <p className="text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Studio X creates modern branding, web experiences, and digital products
-            designed for ambitious businesses and creators.
+            Luxury packaging, innovative printing and modern branding
+            experiences designed for ambitious businesses.
           </p>
 
           <div className="flex gap-6 justify-center mt-16 flex-wrap">
@@ -77,18 +77,19 @@ export default function Home() {
           <div>
 
             <p className="uppercase tracking-[5px] text-gray-500 mb-5">
-              About Studio X
+              About Us
             </p>
 
             <h2 className="text-5xl md:text-7xl font-black leading-tight mb-8">
-              Modern Creativity
+              Modern Printing
               <br />
-              Meets Strategy
+              Meets Luxury
             </h2>
 
             <p className="text-gray-600 text-xl leading-relaxed mb-8">
-              Studio X is a digital creative studio specializing in branding,
-              UI/UX design, web development, and modern digital experiences.
+              Mukesh Graphics specializes in premium branding,
+              modern packaging and high-quality printing
+              solutions for growing businesses.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
@@ -154,11 +155,11 @@ export default function Home() {
               <div className="p-8">
 
                 <h3 className="text-3xl font-bold mb-4">
-                  Branding & Identity
+                  Packaging Design
                 </h3>
 
                 <p className="text-gray-600">
-                  Strong visual identity systems for modern businesses.
+                  Premium packaging concepts tailored for luxury brands.
                 </p>
 
               </div>
@@ -176,11 +177,11 @@ export default function Home() {
               <div className="p-8">
 
                 <h3 className="text-3xl font-bold mb-4">
-                  Web Design
+                  Offset Printing
                 </h3>
 
                 <p className="text-gray-600">
-                  Clean, responsive and modern website experiences.
+                  High-quality printing with sharp finishing.
                 </p>
 
               </div>
@@ -198,11 +199,11 @@ export default function Home() {
               <div className="p-8">
 
                 <h3 className="text-3xl font-bold mb-4">
-                  Digital Strategy
+                  Branding
                 </h3>
 
                 <p className="text-gray-600">
-                  Growth-focused digital solutions for brands.
+                  Creative identity and visual strategy solutions.
                 </p>
 
               </div>
@@ -226,11 +227,11 @@ export default function Home() {
           <div className="text-center mb-24">
 
             <p className="uppercase tracking-[5px] text-orange-500 mb-4 font-semibold">
-              Why Studio X
+              Why Choose Us
             </p>
 
             <h2 className="text-5xl md:text-7xl font-black tracking-[-2px]">
-              Built for Modern Brands
+              Excellence In Every Print
             </h2>
 
           </div>
@@ -243,7 +244,7 @@ export default function Home() {
                 Premium Quality
               </h3>
               <p className="text-gray-600">
-                High-end creative solutions.
+                High-end printing and luxury finishing solutions.
               </p>
             </div>
 
@@ -253,17 +254,17 @@ export default function Home() {
                 Fast Delivery
               </h3>
               <p className="text-gray-600">
-                Quick turnaround projects.
+                Quick turnaround with guaranteed quality.
               </p>
             </div>
 
             <div className="bg-[#f7f7f7] rounded-[35px] p-10 text-center shadow-lg">
               <div className="text-5xl mb-6">🎨</div>
               <h3 className="text-2xl font-bold mb-4">
-                Creative Thinking
+                Creative Designs
               </h3>
               <p className="text-gray-600">
-                Unique modern design approach.
+                Modern branding and eye-catching packaging.
               </p>
             </div>
 
@@ -273,7 +274,7 @@ export default function Home() {
                 Trusted Support
               </h3>
               <p className="text-gray-600">
-                Always available for clients.
+                Dedicated assistance for every project.
               </p>
             </div>
 
@@ -308,25 +309,33 @@ export default function Home() {
             <div className="bg-white/5 border border-white/10 rounded-[35px] p-10">
               <div className="text-7xl font-black text-white/20 mb-8">01</div>
               <h3 className="text-3xl font-bold mb-5">Strategy</h3>
-              <p className="text-gray-300">Understanding goals and users.</p>
+              <p className="text-gray-300">
+                Understanding client goals and brand identity.
+              </p>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-[35px] p-10">
               <div className="text-7xl font-black text-white/20 mb-8">02</div>
               <h3 className="text-3xl font-bold mb-5">Design</h3>
-              <p className="text-gray-300">Crafting modern visuals.</p>
+              <p className="text-gray-300">
+                Creating premium visual concepts and layouts.
+              </p>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-[35px] p-10">
               <div className="text-7xl font-black text-white/20 mb-8">03</div>
-              <h3 className="text-3xl font-bold mb-5">Build</h3>
-              <p className="text-gray-300">Developing digital products.</p>
+              <h3 className="text-3xl font-bold mb-5">Printing</h3>
+              <p className="text-gray-300">
+                Precision printing with luxury finishing.
+              </p>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-[35px] p-10">
               <div className="text-7xl font-black text-white/20 mb-8">04</div>
-              <h3 className="text-3xl font-bold mb-5">Deliver</h3>
-              <p className="text-gray-300">Final polished product.</p>
+              <h3 className="text-3xl font-bold mb-5">Delivery</h3>
+              <p className="text-gray-300">
+                Fast and quality-assured final delivery.
+              </p>
             </div>
 
           </div>
@@ -350,16 +359,30 @@ export default function Home() {
             </p>
 
             <h2 className="text-5xl md:text-7xl font-black">
-              Featured Work
+              Featured Projects
             </h2>
 
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
 
-            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070&auto=format&fit=crop" className="rounded-[35px] h-[500px] w-full object-cover" />
-            <img src="https://images.unsplash.com/photo-1516321310764-8d5a5f4c2d0f?q=80&w=2070&auto=format&fit=crop" className="rounded-[35px] h-[500px] w-full object-cover" />
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2070&auto=format&fit=crop" className="rounded-[35px] h-[500px] w-full object-cover" />
+            <img
+              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070&auto=format&fit=crop"
+              alt=""
+              className="rounded-[35px] h-[500px] w-full object-cover"
+            />
+
+            <img
+              src="https://images.unsplash.com/photo-1516321310764-8d5a5f4c2d0f?q=80&w=2070&auto=format&fit=crop"
+              alt=""
+              className="rounded-[35px] h-[500px] w-full object-cover"
+            />
+
+            <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2070&auto=format&fit=crop"
+              alt=""
+              className="rounded-[35px] h-[500px] w-full object-cover"
+            />
 
           </div>
 
@@ -384,16 +407,29 @@ export default function Home() {
             <h2 className="text-5xl md:text-7xl font-black mb-8">
               Let’s Build
               <br />
-              Something Great
+              Your Brand
             </h2>
 
           </div>
 
           <div className="bg-white p-10 rounded-[40px] shadow-xl">
 
-            <input type="text" placeholder="Your Name" className="w-full border p-5 rounded-2xl mb-5" />
-            <input type="email" placeholder="Your Email" className="w-full border p-5 rounded-2xl mb-5" />
-            <textarea placeholder="Project Details" className="w-full border p-5 rounded-2xl mb-5 h-40"></textarea>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full border p-5 rounded-2xl mb-5"
+            />
+
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full border p-5 rounded-2xl mb-5"
+            />
+
+            <textarea
+              placeholder="Project Details"
+              className="w-full border p-5 rounded-2xl mb-5 h-40"
+            ></textarea>
 
             <button className="w-full bg-black text-white py-5 rounded-2xl">
               Book Now
@@ -414,12 +450,25 @@ export default function Home() {
         <div className="max-w-3xl mx-auto bg-[#f7f7f7] p-12 rounded-[40px] shadow-2xl">
 
           <h2 className="text-5xl font-black text-center mb-10">
-            Contact Studio X
+            Contact Us
           </h2>
 
-          <input type="text" placeholder="Your Name" className="w-full border p-5 rounded-2xl mb-6" />
-          <input type="email" placeholder="Your Email" className="w-full border p-5 rounded-2xl mb-6" />
-          <textarea placeholder="Your Message" className="w-full border p-5 rounded-2xl mb-6 h-40"></textarea>
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full border p-5 rounded-2xl mb-6"
+          />
+
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full border p-5 rounded-2xl mb-6"
+          />
+
+          <textarea
+            placeholder="Your Message"
+            className="w-full border p-5 rounded-2xl mb-6 h-40"
+          ></textarea>
 
           <button className="w-full bg-black text-white py-5 rounded-2xl">
             Send Message
@@ -429,16 +478,19 @@ export default function Home() {
 
       </section>
 
-      {/* WHATSAPP */}
+      {/* WHATSAPP BUTTON */}
       <a
         href="https://wa.me/919999999999"
         target="_blank"
         className="fixed bottom-6 right-6 z-[100] w-16 h-16 rounded-full bg-green-500 flex items-center justify-center shadow-2xl hover:scale-110 transition duration-300"
       >
+
         <img
           src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+          alt=""
           className="w-9 h-9"
         />
+
       </a>
 
       <Footer />
