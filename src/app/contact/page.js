@@ -1,21 +1,55 @@
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[#f6f9fc] flex items-center justify-center">
-      <div className="text-center">
+    <main className="pt-36 pb-24 px-6 bg-[#f6f9fc] min-h-screen">
 
-        <h1 className="text-5xl font-bold text-[#0b2d57] mb-10">
+      <div className="max-w-7xl mx-auto text-center mb-24">
+
+        <h1 className="text-6xl font-black text-[#0b2d57] mb-6">
           Contact Us
         </h1>
 
-        <div className="space-y-5 text-xl text-gray-700">
+        <p className="text-xl text-gray-600">
+          Let’s work together
+        </p>
 
-          <p>📞 +91 9426272081</p>
-          <p>✉ info@mukeshgraphics.com</p>
-          <p>📍 Bhavnagar, Gujarat</p>
+      </div>
+
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
+        <div className="bg-white rounded-[35px] p-10 shadow-xl">
+
+          <h2 className="text-4xl font-black mb-8 text-[#0b2d57]">
+            Office Contact
+          </h2>
+
+          <div className="space-y-5 text-xl text-gray-700">
+
+            <p>📞 +91 9426272081</p>
+            <p>✉ info@mukeshgraphics.com</p>
+            <p>📍 Bhavnagar, Gujarat</p>
+
+          </div>
+
+        </div>
+
+        <div className="bg-white rounded-[35px] p-10 shadow-xl">
+
+          <h2 className="text-4xl font-black mb-8 text-[#0b2d57]">
+            Business Enquiry
+          </h2>
+
+          <div className="space-y-5 text-xl text-gray-700">
+
+            <p>📞 +91 9825982727</p>
+            <p>✉ sales@mukeshgraphics.com</p>
+            <p>📍 Gujarat Industrial Area</p>
+
+          </div>
 
         </div>
 
       </div>
+
     </main>
   );
 }
