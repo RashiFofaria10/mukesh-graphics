@@ -3,13 +3,14 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Mukesh Graphics",
-  description: "Premium Printing & Packaging Solutions",
+  description: "Luxury Printing & Packaging Solutions",
 };
 
 function Navbar() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#071d45]/95 backdrop-blur-md shadow-lg">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+    <header className="fixed top-5 left-0 w-full z-50 flex justify-center px-4">
+
+      <div className="w-full max-w-7xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-full px-8 py-5 flex items-center justify-between">
 
         <Link
           href="/"
@@ -18,7 +19,7 @@ function Navbar() {
           Mukesh Graphics
         </Link>
 
-        <nav className="flex gap-8 text-white font-semibold text-lg">
+        <nav className="hidden lg:flex gap-8 text-white font-semibold">
 
           <Link href="/" className="hover:text-orange-400 transition">
             Home
@@ -36,22 +37,42 @@ function Navbar() {
             Portfolio
           </Link>
 
+          <Link href="/gallery" className="hover:text-orange-400 transition">
+            Gallery
+          </Link>
+
+          <Link href="/clients" className="hover:text-orange-400 transition">
+            Clients
+          </Link>
+
+          <Link href="/testimonials" className="hover:text-orange-400 transition">
+            Testimonials
+          </Link>
+
           <Link href="/contact" className="hover:text-orange-400 transition">
             Contact
           </Link>
 
         </nav>
 
+        <Link
+          href="/book-service"
+          className="bg-orange-500 hover:bg-orange-600 transition text-white px-7 py-3 rounded-full font-bold"
+        >
+          Book Service
+        </Link>
+
       </div>
+
     </header>
   );
 }
 
 function Footer() {
   return (
-    <footer className="bg-[#071d45] text-white pt-20 pb-10 mt-20">
+    <footer className="bg-[#04152d] text-white pt-24 pb-10">
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 px-6">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 px-6">
 
         <div>
 
@@ -59,8 +80,8 @@ function Footer() {
             Mukesh Graphics
           </h2>
 
-          <p className="text-gray-300 leading-relaxed text-lg">
-            Premium printing and packaging company delivering innovative branding and industrial packaging solutions.
+          <p className="text-gray-400 leading-relaxed">
+            Premium industrial printing, packaging and branding solutions for modern businesses.
           </p>
 
         </div>
@@ -71,13 +92,29 @@ function Footer() {
             Quick Links
           </h2>
 
-          <div className="space-y-3 text-lg">
+          <div className="space-y-3 text-gray-300">
 
             <p><Link href="/">Home</Link></p>
             <p><Link href="/about">About</Link></p>
             <p><Link href="/services">Services</Link></p>
             <p><Link href="/portfolio">Portfolio</Link></p>
-            <p><Link href="/contact">Contact</Link></p>
+
+          </div>
+
+        </div>
+
+        <div>
+
+          <h2 className="text-2xl font-bold mb-6">
+            Services
+          </h2>
+
+          <div className="space-y-3 text-gray-300">
+
+            <p>Offset Printing</p>
+            <p>Packaging Design</p>
+            <p>Luxury Branding</p>
+            <p>Industrial Printing</p>
 
           </div>
 
@@ -89,7 +126,7 @@ function Footer() {
             Contact
           </h2>
 
-          <div className="space-y-3 text-lg text-gray-300">
+          <div className="space-y-3 text-gray-300">
 
             <p>📞 +91 9426272081</p>
             <p>✉ info@mukeshgraphics.com</p>
@@ -101,7 +138,7 @@ function Footer() {
 
       </div>
 
-      <div className="border-t border-white/20 mt-16 pt-6 text-center text-gray-400">
+      <div className="border-t border-white/10 mt-16 pt-6 text-center text-gray-500">
         © 2026 Mukesh Graphics. All Rights Reserved.
       </div>
 
