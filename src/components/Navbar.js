@@ -9,13 +9,13 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", link: "#home" },
-    { name: "About", link: "#about" },
+    { name: "About Us", link: "#about" },
     { name: "Services", link: "#services" },
-    { name: "Why Us", link: "#whychoose" },
+    { name: "Why Choose Us", link: "#whychoose" },
     { name: "Process", link: "#process" },
     { name: "Portfolio", link: "#portfolio" },
     { name: "Booking", link: "#booking" },
-    { name: "Contact", link: "#contact" },
+    { name: "Contact Us", link: "#contact" },
   ]
 
   return (
@@ -30,7 +30,7 @@ export default function Navbar() {
             href="#home"
             className="text-2xl md:text-3xl font-black tracking-[-1px]"
           >
-            Studio X
+            Mukesh Graphics
           </a>
 
           {/* DESKTOP MENU */}
@@ -70,7 +70,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
 
           <h2 className="text-2xl font-black">
-            Studio X
+            Menu
           </h2>
 
           <button onClick={() => setOpen(false)}>
