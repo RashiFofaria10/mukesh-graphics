@@ -2,47 +2,31 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-[#072b57] text-white pt-24">
+    <footer className="bg-[#072b57] text-white pt-20">
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-14 pb-16">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 pb-16">
 
         <div>
 
-          <div className="flex items-center gap-3 mb-8">
-
-            <img
-              src="https://i.imgur.com/3r8QZ6D.png"
-              alt=""
-              className="w-16"
-            />
-
-            <div>
-              <h2 className="text-4xl font-black leading-none">
-                MUKESH
-              </h2>
-
-              <p className="text-xl font-semibold text-gray-300">
-                GRAPHICS
-              </p>
-            </div>
-
-          </div>
+          <h2 className="text-4xl font-black mb-6">
+            Mukesh Graphics
+          </h2>
 
           <p className="text-gray-300 leading-relaxed text-lg">
             Mukesh Graphics is a premium printing,
-            packaging, and designing company delivering quality,
-            precision, and innovation.
+            packaging and designing company delivering
+            quality, precision and innovation.
           </p>
 
         </div>
 
         <div>
 
-          <h3 className="text-3xl font-bold mb-8">
+          <h3 className="font-bold text-2xl mb-6">
             Quick Navigation
           </h3>
 
-          <div className="flex flex-col gap-5 text-lg text-gray-300">
+          <div className="flex flex-col gap-4 text-gray-300">
 
             <a href="#home">Home</a>
             <a href="#portfolio">Portfolio</a>
@@ -56,11 +40,11 @@ export default function Footer() {
 
         <div>
 
-          <h3 className="text-3xl font-bold mb-8">
+          <h3 className="font-bold text-2xl mb-6">
             Get In Touch
           </h3>
 
-          <div className="space-y-6 text-lg text-gray-300">
+          <div className="flex flex-col gap-5 text-gray-300 leading-relaxed">
 
             <p>
               PLOT NO. 58, VISHWAKARMA ESTATE,
@@ -86,11 +70,11 @@ export default function Footer() {
 
         <div>
 
-          <h3 className="text-3xl font-bold mb-8">
+          <h3 className="font-bold text-2xl mb-6">
             Working Hours
           </h3>
 
-          <div className="space-y-5 text-lg text-gray-300">
+          <div className="flex flex-col gap-5 text-gray-300">
 
             <p>
               Monday – Friday
@@ -122,9 +106,9 @@ export default function Footer() {
 
       </div>
 
-      <div className="border-t border-white/10 py-8 px-6">
+      <div className="border-t border-white/10 py-6">
 
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-4 text-gray-300">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-4 text-gray-300">
 
           <p>
             © 2026 All Rights Reserved by Mukesh Graphics
