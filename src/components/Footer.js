@@ -4,21 +4,19 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
 
-        {/* BRAND */}
         <div>
 
           <h2 className="text-3xl font-bold mb-4">
-            Studio X
+            Mukesh Graphics
           </h2>
 
           <p className="text-gray-600 leading-relaxed">
-            Modern creative studio focused on branding,
-            digital experiences, and premium visual design solutions.
+            Premium printing, packaging and branding
+            solutions for modern businesses.
           </p>
 
         </div>
 
-        {/* NAVIGATION */}
         <div>
 
           <h3 className="font-semibold text-xl mb-4">
@@ -34,7 +32,6 @@ export default function Footer() {
 
         </div>
 
-        {/* SERVICES */}
         <div>
 
           <h3 className="font-semibold text-xl mb-4">
@@ -42,15 +39,14 @@ export default function Footer() {
           </h3>
 
           <div className="flex flex-col gap-3 text-gray-600">
-            <p>Brand Identity</p>
-            <p>Web Design</p>
-            <p>UI/UX Design</p>
-            <p>Creative Strategy</p>
+            <p>Packaging</p>
+            <p>Printing</p>
+            <p>Branding</p>
+            <p>Design</p>
           </div>
 
         </div>
 
-        {/* CONTACT */}
         <div>
 
           <h3 className="font-semibold text-xl mb-4">
@@ -59,7 +55,7 @@ export default function Footer() {
 
           <div className="flex flex-col gap-3 text-gray-600">
             <p>Ahmedabad, India</p>
-            <p>hello@studiox.com</p>
+            <p>info@mukeshgraphics.com</p>
             <p>+91 98765 43210</p>
           </div>
 
