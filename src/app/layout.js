@@ -1,163 +1,97 @@
-import "./globals.css";
-import Link from "next/link";
-
-export const metadata = {
-  title: "Mukesh Graphics",
-  description: "Luxury Printing & Packaging Solutions",
-};
-
-function Navbar() {
+export default function HomePage() {
   return (
-    <header className="fixed top-5 left-0 w-full z-50 flex justify-center px-4">
+    <main className="bg-[#03152c] text-white overflow-hidden">
 
-      <div className="w-full max-w-7xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-full px-8 py-5 flex items-center justify-between">
+      <section className="min-h-screen flex items-center px-6 pt-36 bg-gradient-to-br from-[#03152c] via-[#08264d] to-[#133b6c]">
 
-        <Link
-          href="/"
-          className="text-3xl font-black text-white tracking-wide"
-        >
-          Mukesh Graphics
-        </Link>
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
 
-        <nav className="hidden lg:flex gap-8 text-white font-semibold">
+          <div>
 
-          <Link href="/" className="hover:text-orange-400 transition">
-            Home
-          </Link>
+            <p className="uppercase tracking-[5px] text-orange-400 font-bold mb-6">
+              Luxury Packaging & Printing
+            </p>
 
-          <Link href="/about" className="hover:text-orange-400 transition">
-            About
-          </Link>
+            <h1 className="text-6xl md:text-8xl font-black leading-tight mb-8">
+              Premium Packaging That Builds Brands
+            </h1>
 
-          <Link href="/services" className="hover:text-orange-400 transition">
-            Services
-          </Link>
+            <p className="text-xl text-gray-300 leading-relaxed mb-10">
+              Mukesh Graphics delivers world-class industrial printing, premium packaging and creative branding solutions with modern innovation.
+            </p>
 
-          <Link href="/portfolio" className="hover:text-orange-400 transition">
-            Portfolio
-          </Link>
+            <div className="flex flex-wrap gap-6">
 
-          <Link href="/gallery" className="hover:text-orange-400 transition">
-            Gallery
-          </Link>
+              <a
+                href="/portfolio"
+                className="bg-orange-500 hover:bg-orange-600 transition px-10 py-5 rounded-full font-bold text-lg"
+              >
+                Explore Portfolio
+              </a>
 
-          <Link href="/clients" className="hover:text-orange-400 transition">
-            Clients
-          </Link>
+              <a
+                href="/book-service"
+                className="border border-white/20 hover:bg-white/10 transition px-10 py-5 rounded-full font-bold text-lg"
+              >
+                Book Service
+              </a>
 
-          <Link href="/testimonials" className="hover:text-orange-400 transition">
-            Testimonials
-          </Link>
+            </div>
 
-          <Link href="/contact" className="hover:text-orange-400 transition">
-            Contact
-          </Link>
+          </div>
 
-        </nav>
+          <div>
 
-        <Link
-          href="/book-service"
-          className="bg-orange-500 hover:bg-orange-600 transition text-white px-7 py-3 rounded-full font-bold"
-        >
-          Book Service
-        </Link>
-
-      </div>
-
-    </header>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-[#04152d] text-white pt-24 pb-10">
-
-      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 px-6">
-
-        <div>
-
-          <h2 className="text-3xl font-black mb-6">
-            Mukesh Graphics
-          </h2>
-
-          <p className="text-gray-400 leading-relaxed">
-            Premium industrial printing, packaging and branding solutions for modern businesses.
-          </p>
-
-        </div>
-
-        <div>
-
-          <h2 className="text-2xl font-bold mb-6">
-            Quick Links
-          </h2>
-
-          <div className="space-y-3 text-gray-300">
-
-            <p><Link href="/">Home</Link></p>
-            <p><Link href="/about">About</Link></p>
-            <p><Link href="/services">Services</Link></p>
-            <p><Link href="/portfolio">Portfolio</Link></p>
+            <img
+              src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1200&auto=format&fit=crop"
+              alt="hero"
+              className="rounded-[40px] shadow-2xl"
+            />
 
           </div>
 
         </div>
 
-        <div>
+      </section>
 
-          <h2 className="text-2xl font-bold mb-6">
-            Services
-          </h2>
+      <section className="py-28 px-6 bg-white text-black">
 
-          <div className="space-y-3 text-gray-300">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
 
-            <p>Offset Printing</p>
-            <p>Packaging Design</p>
-            <p>Luxury Branding</p>
-            <p>Industrial Printing</p>
+          <div className="bg-[#f6f9fc] p-10 rounded-[35px] shadow-xl">
+            <div className="text-6xl mb-6">📦</div>
+            <h2 className="text-3xl font-black mb-4">
+              Packaging
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Luxury packaging solutions for premium businesses.
+            </p>
+          </div>
 
+          <div className="bg-[#f6f9fc] p-10 rounded-[35px] shadow-xl">
+            <div className="text-6xl mb-6">🖨️</div>
+            <h2 className="text-3xl font-black mb-4">
+              Offset Printing
+            </h2>
+            <p className="text-gray-600 text-lg">
+              High-end industrial printing technology.
+            </p>
+          </div>
+
+          <div className="bg-[#f6f9fc] p-10 rounded-[35px] shadow-xl">
+            <div className="text-6xl mb-6">🎨</div>
+            <h2 className="text-3xl font-black mb-4">
+              Branding
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Creative visual identity and branding solutions.
+            </p>
           </div>
 
         </div>
 
-        <div>
+      </section>
 
-          <h2 className="text-2xl font-bold mb-6">
-            Contact
-          </h2>
-
-          <div className="space-y-3 text-gray-300">
-
-            <p>📞 +91 9426272081</p>
-            <p>✉ info@mukeshgraphics.com</p>
-            <p>📍 Bhavnagar, Gujarat</p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div className="border-t border-white/10 mt-16 pt-6 text-center text-gray-500">
-        © 2026 Mukesh Graphics. All Rights Reserved.
-      </div>
-
-    </footer>
-  );
-}
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-
-        <Navbar />
-
-        {children}
-
-        <Footer />
-
-      </body>
-    </html>
+    </main>
   );
 }
