@@ -4,10 +4,10 @@
 
 function Footer() {
   return (
-    <footer className="bg-black text-white py-10 px-6">
+    <footer className="bg-black text-white py-8 px-6 mt-20">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-2xl font-bold mb-2">Mukesh Graphics</h2>
-        <p className="text-gray-400 text-sm">
+        <h2 className="text-xl font-bold">Mukesh Graphics</h2>
+        <p className="text-gray-400 text-sm mt-1">
           © 2026 All Rights Reserved
         </p>
       </div>
@@ -19,15 +19,30 @@ export default function Page() {
   return (
     <main className="bg-[#f7f8fa] text-black overflow-hidden">
 
-      {/* ================= NAVBAR (UNCHANGED AS REQUESTED) ================= */}
-      <header className="fixed top-5 w-full flex justify-center z-50">
-        <div className="bg-white/70 backdrop-blur-xl px-10 py-5 rounded-full shadow-lg flex gap-10 font-semibold text-base">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
+      {/* ================= FULL WIDTH NAVBAR ================= */}
+      <header className="w-full fixed top-0 left-0 z-50 bg-white shadow-md">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-5">
+
+          <h1 className="text-2xl font-black">
+            Mukesh Graphics
+          </h1>
+
+          <nav className="flex gap-10 font-semibold text-gray-700">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#clients">Clients</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <a
+            href="#contact"
+            className="bg-black text-white px-5 py-2 rounded-full text-sm"
+          >
+            Book Service
+          </a>
+
         </div>
       </header>
 
@@ -38,17 +53,17 @@ export default function Page() {
 
           <div>
             <h1 className="text-6xl font-black mb-6 leading-tight">
-              Luxury Packaging <br /> & Branding Studio
+              Premium Packaging <br /> & Printing Studio
             </h1>
 
             <p className="text-gray-600 text-lg">
-              High-end printing, packaging and brand identity solutions.
+              High-quality packaging, branding and offset printing solutions for modern businesses.
             </p>
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338"
-            className="rounded-3xl h-[600px] w-full object-cover shadow-2xl"
+            src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=1600&q=80"
+            className="rounded-3xl h-[600px] w-full object-cover shadow-xl"
           />
 
         </div>
@@ -60,14 +75,14 @@ export default function Page() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
           <img
-            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758"
-            className="rounded-3xl h-[520px] w-full object-cover"
+            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80"
+            className="rounded-3xl h-[520px] w-full object-cover shadow-lg"
           />
 
           <div>
             <h2 className="text-4xl font-black mb-4">About Us</h2>
             <p className="text-gray-600 text-lg">
-              We design premium packaging and branding for modern global companies with precision and creativity.
+              We specialize in luxury packaging design, FMCG cartons, labels, and industrial printing with precision and creativity.
             </p>
           </div>
 
@@ -81,19 +96,19 @@ export default function Page() {
 
           {[
             {
-              title: "Packaging",
-              img: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338",
+              title: "Packaging Design",
+              img: "https://images.unsplash.com/photo-1615486364137-7a2b0e3c1c78?auto=format&fit=crop&w=1600&q=80",
             },
             {
-              title: "Printing",
-              img: "https://images.unsplash.com/photo-1586880244406-556ebe35f282",
+              title: "Offset Printing",
+              img: "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?auto=format&fit=crop&w=1600&q=80",
             },
             {
-              title: "Branding",
-              img: "https://images.unsplash.com/photo-1557683316-973673baf926",
+              title: "Brand Identity",
+              img: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1600&q=80",
             },
           ].map((s, i) => (
-            <div key={i} className="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div key={i} className="bg-white rounded-3xl shadow-lg overflow-hidden">
 
               <img
                 src={s.img}
@@ -113,29 +128,23 @@ export default function Page() {
       {/* ================= PORTFOLIO ================= */}
       <section id="portfolio" className="py-32 bg-white px-6">
 
-        <h2 className="text-4xl font-black text-center mb-12">Our Work</h2>
+        <h2 className="text-4xl font-black text-center mb-12">
+          Our Work
+        </h2>
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
 
-          <img
-            src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a"
-            className="rounded-3xl h-[350px] w-full object-cover shadow-xl"
-          />
+          <img src="https://images.unsplash.com/photo-1616627561836-6f2f1f5c3a51?auto=format&fit=crop&w=1600&q=80"
+            className="rounded-3xl h-[350px] w-full object-cover" />
 
-          <img
-            src="https://images.unsplash.com/photo-1616627561836-6f2f1f5c3a51"
-            className="rounded-3xl h-[350px] w-full object-cover shadow-xl"
-          />
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80"
+            className="rounded-3xl h-[350px] w-full object-cover" />
 
-          <img
-            src="https://images.unsplash.com/photo-1520975916090-3105956dac38"
-            className="rounded-3xl h-[350px] w-full object-cover shadow-xl"
-          />
+          <img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93?auto=format&fit=crop&w=1600&q=80"
+            className="rounded-3xl h-[350px] w-full object-cover" />
 
-          <img
-            src="https://images.unsplash.com/photo-1622554665555-1e9c3b6f2a8f"
-            className="rounded-3xl h-[350px] w-full object-cover shadow-xl"
-          />
+          <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1600&q=80"
+            className="rounded-3xl h-[350px] w-full object-cover" />
 
         </div>
       </section>
@@ -144,10 +153,10 @@ export default function Page() {
       <section id="clients" className="py-32 px-6 bg-[#f7f8fa]">
 
         <h2 className="text-4xl font-black text-center mb-12">
-          Trusted By
+          Trusted By Leading Brands
         </h2>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
 
           {[
             "https://upload.wikimedia.org/wikipedia/en/4/4a/Amul_logo.svg",
@@ -159,19 +168,18 @@ export default function Page() {
             "https://upload.wikimedia.org/wikipedia/commons/7/7c/Torrent_Pharmaceuticals_logo.svg",
             "https://upload.wikimedia.org/wikipedia/commons/5/5f/Dr_Reddy%27s_Laboratories_Logo.svg",
           ].map((logo, i) => (
-            <div key={i} className="bg-white p-6 rounded-2xl shadow flex items-center justify-center">
+            <div key={i} className="bg-white p-6 rounded-2xl shadow flex justify-center items-center">
               <img src={logo} className="h-10 object-contain" />
             </div>
           ))}
 
         </div>
-
       </section>
 
       {/* ================= CONTACT ================= */}
-      <section id="contact" className="py-32 px-6 bg-white text-center">
+      <section id="contact" className="py-32 px-6 text-center bg-white">
 
-        <h2 className="text-4xl font-black mb-10">Contact Us</h2>
+        <h2 className="text-4xl font-black mb-8">Contact Us</h2>
 
         <div className="max-w-xl mx-auto space-y-4">
           <input className="w-full p-4 border rounded-xl" placeholder="Name" />
@@ -184,7 +192,7 @@ export default function Page() {
 
       </section>
 
-      {/* ================= FOOTER (BLACK SMALL) ================= */}
+      {/* ================= FOOTER ================= */}
       <Footer />
 
     </main>
