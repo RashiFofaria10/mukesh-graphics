@@ -1,27 +1,39 @@
 "use client";
 
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Phone,
-  Mail,
-  MapPin,
-  Clock3,
-  ArrowUpRight,
-} from "lucide-react";
+/* ================= ICONS (SAFE SVG - NO LIBRARY ISSUES) ================= */
 
-/* ================= FOOTER (YOUR EXACT VERSION) ================= */
+const Icon = {
+  Facebook: () => (
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.3V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12z"/>
+    </svg>
+  ),
+  Instagram: () => (
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 8.5z"/>
+    </svg>
+  ),
+  Linkedin: () => (
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M4 4h4v16H4V4zm2 2a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 4h4v2h.1A4 4 0 0 1 20 12v8h-4v-7c0-1-.5-2-2-2s-2 1-2 2v7h-4V10h4z"/>
+    </svg>
+  ),
+  Phone: () => <span>📞</span>,
+  Mail: () => <span>✉️</span>,
+  MapPin: () => <span>📍</span>,
+  Clock: () => <span>⏰</span>,
+  Arrow: () => <span>↗</span>,
+};
+
+/* ================= FOOTER ================= */
 
 function Footer() {
   return (
     <footer className="relative overflow-hidden bg-gradient-to-br from-[#06152e] via-[#072b57] to-[#0b3d78] text-white">
 
-      <div className="absolute top-[-120px] left-[-120px] w-[350px] h-[350px] bg-orange-500/20 blur-[120px] rounded-full"></div>
-      <div className="absolute bottom-[-120px] right-[-120px] w-[350px] h-[350px] bg-blue-400/20 blur-[120px] rounded-full"></div>
-
-      {/* CTA */}
       <div className="max-w-7xl mx-auto px-6 pt-24">
+
+        {/* CTA */}
         <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-[40px] p-10 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-2xl">
 
           <div>
@@ -29,21 +41,20 @@ function Footer() {
               LET'S WORK TOGETHER
             </p>
 
-            <h2 className="text-4xl md:text-6xl font-black leading-tight mb-6">
-              Build Packaging That Stands Out Everywhere
+            <h2 className="text-4xl md:text-6xl font-black mb-6">
+              Build Packaging That Stands Out
             </h2>
 
             <p className="text-gray-300 text-lg max-w-2xl">
-              Premium printing and packaging solutions crafted with innovation and precision.
+              Premium printing and packaging solutions crafted with precision.
             </p>
           </div>
 
           <a
             href="#contact"
-            className="bg-orange-500 hover:bg-orange-600 transition px-10 py-5 rounded-full text-xl font-bold flex items-center gap-3 shadow-xl"
+            className="bg-orange-500 hover:bg-orange-600 px-10 py-5 rounded-full font-bold flex items-center gap-2"
           >
-            Contact Us
-            <ArrowUpRight size={24} />
+            Contact Us <Icon.Arrow />
           </a>
 
         </div>
@@ -55,19 +66,19 @@ function Footer() {
         <div>
           <h2 className="text-4xl font-black mb-6">Mukesh Graphics</h2>
           <p className="text-gray-300 mb-8">
-            Premium printing and packaging solutions delivering luxury design excellence.
+            Premium printing & packaging solutions for modern brands.
           </p>
 
           <div className="flex gap-4">
-            <Facebook />
-            <Instagram />
-            <Linkedin />
+            <Icon.Facebook />
+            <Icon.Instagram />
+            <Icon.Linkedin />
           </div>
         </div>
 
         <div>
           <h3 className="text-2xl font-black mb-6">Navigation</h3>
-          <div className="space-y-4 text-gray-300">
+          <div className="space-y-3 text-gray-300">
             {["home", "about", "services", "portfolio", "contact"].map((i) => (
               <a key={i} href={`#${i}`} className="block hover:text-orange-400">
                 {i}
@@ -78,21 +89,19 @@ function Footer() {
 
         <div>
           <h3 className="text-2xl font-black mb-6">Contact</h3>
-
           <div className="space-y-4 text-gray-300">
-            <p className="flex gap-3"><MapPin /> Bhavnagar, Gujarat</p>
-            <p className="flex gap-3"><Phone /> +91 9426272081</p>
-            <p className="flex gap-3"><Mail /> info@mukeshgraphics.com</p>
+            <p><Icon.MapPin /> Bhavnagar, Gujarat</p>
+            <p><Icon.Phone /> +91 9426272081</p>
+            <p><Icon.Mail /> info@mukeshgraphics.com</p>
           </div>
         </div>
 
         <div>
           <h3 className="text-2xl font-black mb-6">Hours</h3>
-
           <div className="space-y-4 text-gray-300">
-            <p className="flex gap-3"><Clock3 /> Mon–Fri: 9AM–7PM</p>
-            <p className="flex gap-3"><Clock3 /> Sat: 9AM–5PM</p>
-            <p className="flex gap-3"><Clock3 /> Sunday Closed</p>
+            <p><Icon.Clock /> Mon–Fri: 9AM–7PM</p>
+            <p><Icon.Clock /> Sat: 9AM–5PM</p>
+            <p><Icon.Clock /> Sunday Closed</p>
           </div>
         </div>
 
@@ -106,90 +115,50 @@ function Footer() {
   );
 }
 
-/* ================= MAIN PAGE ================= */
+/* ================= PAGE ================= */
 
 export default function Page() {
   return (
     <main className="bg-[#f6f7fb] text-[#111] overflow-hidden">
 
-      {/* NAVBAR */}
-      <header className="fixed top-5 left-0 w-full z-50 flex justify-center px-4">
-        <div className="w-full max-w-7xl bg-white/70 backdrop-blur-xl border shadow-xl rounded-full px-8 py-5 flex justify-between items-center">
-
-          <h1 className="text-2xl font-black">Mukesh Graphics</h1>
-
-          <nav className="hidden md:flex gap-8 text-sm font-semibold text-gray-700">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Work</a>
-            <a href="#contact">Contact</a>
-          </nav>
-
-          <a href="#contact" className="bg-black text-white px-6 py-3 rounded-full">
-            Book Now
-          </a>
-
-        </div>
-      </header>
-
       {/* HERO */}
-      <section id="home" className="min-h-screen flex items-center px-6 pt-36">
-
+      <section className="min-h-screen flex items-center px-6 pt-32">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
 
           <div>
-            <p className="uppercase tracking-[6px] text-gray-500 mb-6">
-              Premium Packaging Studio
-            </p>
-
-            <h1 className="text-6xl md:text-8xl font-black mb-8 leading-[1.05]">
-              Luxury Branding & Packaging
+            <h1 className="text-6xl md:text-8xl font-black mb-6">
+              Luxury Packaging Studio
             </h1>
 
             <p className="text-xl text-gray-600 mb-10">
-              We design high-end packaging, branding systems and industrial print solutions.
+              We design premium branding, packaging & printing solutions.
             </p>
-
-            <a href="#services" className="bg-black text-white px-8 py-5 rounded-full">
-              Explore Services
-            </a>
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1800&auto=format&fit=crop"
-            className="rounded-[40px] shadow-2xl h-[700px] object-cover"
+            src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=2000&auto=format&fit=crop"
+            className="rounded-[40px] h-[650px] object-cover shadow-2xl"
           />
 
         </div>
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-40 px-6 bg-white">
+      <section className="py-40 px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-
-          <div className="grid grid-cols-2 gap-6">
-
-            <img
-              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop"
-              className="rounded-[35px] h-[520px] object-cover shadow-xl"
-            />
-
-            <img
-              src="https://images.unsplash.com/photo-1616627561836-6f2f1f5c3a51?q=80&w=1600&auto=format&fit=crop"
-              className="rounded-[35px] h-[520px] object-cover shadow-xl mt-20"
-            />
-
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2000&auto=format&fit=crop"
+            className="rounded-[35px] h-[500px] object-cover shadow-xl"
+          />
 
           <div>
-            <h2 className="text-5xl font-black mb-8">
-              Precision Craftsmanship for Modern Brands
+            <h2 className="text-5xl font-black mb-6">
+              Precision & Luxury Design
             </h2>
 
-            <p className="text-xl text-gray-600">
-              We specialize in luxury packaging, FMCG branding, and premium printing solutions.
+            <p className="text-gray-600 text-xl">
+              We create high-end packaging and branding for global companies.
             </p>
           </div>
 
@@ -197,18 +166,17 @@ export default function Page() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-40 px-6">
-
+      <section className="py-40 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
 
           {[
-            "https://images.unsplash.com/photo-1586075010923-2dd4570fb338",
-            "https://images.unsplash.com/photo-1586880244406-556ebe35f282",
-            "https://images.unsplash.com/photo-1557683316-973673baf926",
+            "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=2000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1586880244406-556ebe35f282?q=80&w=2000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2000&auto=format&fit=crop",
           ].map((img, i) => (
             <div key={i} className="bg-white rounded-[30px] shadow-xl overflow-hidden">
 
-              <img src={img + "?q=80&w=1600&auto=format&fit=crop"} className="h-[320px] w-full object-cover" />
+              <img src={img} className="h-[320px] w-full object-cover" />
 
               <div className="p-8 font-black text-xl">
                 Service {i + 1}
@@ -218,58 +186,40 @@ export default function Page() {
           ))}
 
         </div>
-
       </section>
 
       {/* PORTFOLIO */}
-      <section id="portfolio" className="py-40 px-6 bg-white">
-
+      <section className="py-40 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
 
           {[
-            "https://images.unsplash.com/photo-1598032895397-b9472444bf93",
-            "https://images.unsplash.com/photo-1622554665555-1e9c3b6f2a8f",
-            "https://images.unsplash.com/photo-1616627561836-6f2f1f5c3a51",
-            "https://images.unsplash.com/photo-1520975916090-3105956dac38",
-          ].map((img) => (
+            "https://images.unsplash.com/photo-1598032895397-b9472444bf93?q=80&w=2000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1622554665555-1e9c3b6f2a8f?q=80&w=2000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1616627561836-6f2f1f5c3a51?q=80&w=2000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=2000&auto=format&fit=crop",
+          ].map((img, i) => (
             <img
-              key={img}
-              src={img + "?q=80&w=1600&auto=format&fit=crop"}
-              className="rounded-[30px] shadow-xl h-[360px] object-cover"
+              key={i}
+              src={img}
+              className="rounded-[30px] h-[350px] object-cover shadow-xl"
             />
           ))}
 
         </div>
-
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-40 px-6 bg-white">
+      <section className="py-40 px-6 bg-white text-center">
+        <h2 className="text-5xl font-black mb-10">Contact Us</h2>
 
-        <div className="max-w-4xl mx-auto text-center mb-16">
-
-          <h2 className="text-5xl font-black mb-6">
-            Let’s Work Together
-          </h2>
-
-          <p className="text-xl text-gray-600">
-            Get premium branding & packaging solutions.
-          </p>
-
-        </div>
-
-        <div className="max-w-3xl mx-auto bg-[#f6f7fb] p-10 rounded-[35px] shadow-2xl">
-
-          <input className="w-full p-5 mb-4 border rounded-xl" placeholder="Name" />
-          <input className="w-full p-5 mb-4 border rounded-xl" placeholder="Email" />
-          <textarea className="w-full p-5 mb-4 border rounded-xl" rows="5" placeholder="Message" />
-
+        <div className="max-w-2xl mx-auto space-y-4">
+          <input className="w-full p-5 border rounded-xl" placeholder="Name" />
+          <input className="w-full p-5 border rounded-xl" placeholder="Email" />
+          <textarea className="w-full p-5 border rounded-xl" rows="5" placeholder="Message" />
           <button className="w-full bg-black text-white py-4 rounded-full">
-            Send Message
+            Send
           </button>
-
         </div>
-
       </section>
 
       {/* FOOTER */}
