@@ -1,278 +1,168 @@
 "use client";
 
-export default function Page() {
+import { useState, useEffect } from "react";
+
+const CONTACT_URL = "https://www.mukeshgraphics.com/contact-us.html";
+const NAV = ["home","about","services","portfolio","clients","contact"];
+
+// SAFE + STABLE HERO IMAGES
+const HERO = [
+  "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1604754742629-3e5728249d73?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1400&q=80",
+];
+
+const SERVICES = [
+  {
+    title:"Packaging Design",
+    tag:"Design",
+    desc:"Premium FMCG, food, pharma & industrial packaging with world-class finishing.",
+    img:"https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title:"Offset Printing",
+    tag:"Print",
+    desc:"5-color offset printing with online coating for vibrant, consistent results.",
+    img:"https://images.unsplash.com/photo-1586339392738-bc59ba0f5f76?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title:"Brand Identity",
+    tag:"Brand",
+    desc:"Letterheads, menu cards & promotional materials — your brand elevated.",
+    img:"https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1200&q=80"
+  },
+];
+
+// CLEAN PORTFOLIO (HIGH QUALITY + STABLE LINKS)
+const PORTFOLIO = [
+  { img:"https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1200&q=80", label:"Pharma Packaging", wide:true },
+  { img:"https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80", label:"Food Boxes" },
+  { img:"https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=1200&q=80", label:"Gift Packaging" },
+  { img:"https://images.unsplash.com/photo-1604754742629-3e5728249d73?auto=format&fit=crop&w=1200&q=80", label:"Retail Boxes" },
+  { img:"https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1200&q=80", label:"Luxury Print" },
+  { img:"https://images.unsplash.com/photo-1586339392738-bc59ba0f5f76?auto=format&fit=crop&w=1200&q=80", label:"Offset Printing", wide:true },
+  { img:"https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1200&q=80", label:"Brand Identity" },
+  { img:"https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1200&q=80", label:"Masala Boxes" },
+  { img:"https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=1200&q=80", label:"Menu Cards" },
+];
+
+// ABOUT GRID (STABLE)
+const ABOUT_GRID = [
+  "https://images.unsplash.com/photo-1604754742629-3e5728249d73?auto=format&fit=crop&w=1000&q=80",
+  "https://images.unsplash.com/photo-1586339392738-bc59ba0f5f76?auto=format&fit=crop&w=1000&q=80",
+  "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1000&q=80",
+  "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1000&q=80",
+];
+
+// FIXED LOGOS (STABLE CDN + FALLBACK HANDLED)
+const CLIENTS = [
+  { name:"Sun Pharma", logo:"https://cdn.simpleicons.org/sunpharma" },
+  { name:"Cipla", logo:"https://cdn.simpleicons.org/cipla" },
+  { name:"Zydus", logo:"https://cdn.simpleicons.org/zydus" },
+  { name:"Torrent", logo:"https://cdn.simpleicons.org/torrent" },
+  { name:"Ajanta", logo:"https://cdn.simpleicons.org/ajantapharma" },
+  { name:"Lupin", logo:"https://cdn.simpleicons.org/lupin" },
+];
+
+function CoverImg({ src, alt, style }) {
   return (
-    <main className="bg-[#f7f8fa] text-[#111] overflow-hidden">
+    <img
+      src={src}
+      alt={alt || ""}
+      style={{
+        width:"100%",
+        height:"100%",
+        objectFit:"cover",
+        objectPosition:"center",
+        display:"block",
+        ...style,
+      }}
+    />
+  );
+}
 
-      {/* NAVBAR */}
-      <header className="fixed top-5 left-0 w-full z-50 flex justify-center px-4">
-        <div className="w-full max-w-7xl bg-white/70 backdrop-blur-xl border shadow-xl rounded-full px-8 py-5 flex items-center justify-between">
+export default function Page() {
+  const [sy, setSy] = useState(0);
+  const [hi, setHi] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [form, setForm] = useState({ name:"", email:"", phone:"", message:"" });
+  const [active, setActive] = useState("home");
 
-          <h1 className="text-2xl font-black">
-            Mukesh Graphics
-          </h1>
+  useEffect(() => {
+    const onScroll = () => setSy(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive:true });
+    const t = setInterval(() => setHi(i => (i+1) % HERO.length), 4000);
+    return () => { window.removeEventListener("scroll", onScroll); clearInterval(t); };
+  }, []);
 
-          <nav className="hidden md:flex gap-8 text-sm font-semibold text-gray-700">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-          </nav>
+  const go = id => document.getElementById(id)?.scrollIntoView({ behavior:"smooth" });
 
-          <a
-            href="#contact"
-            className="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:scale-105 transition"
-          >
-            Book Service
-          </a>
+  const solid = sy > 50;
 
-        </div>
-      </header>
+  return (
+    <main style={{ background:"#fff", overflowX:"hidden" }}>
 
       {/* HERO */}
-      <section id="home" className="min-h-screen flex items-center px-6 pt-36">
+      <section id="home" style={{ minHeight:"100vh", display:"grid", gridTemplateColumns:"1fr 1fr" }}>
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-
-          <div>
-            <p className="uppercase tracking-[6px] text-gray-500 mb-6">
-              Premium Printing & Packaging Studio
-            </p>
-
-            <h1 className="text-6xl md:text-8xl font-black leading-[1.05] mb-8 bg-gradient-to-r from-black to-gray-500 text-transparent bg-clip-text">
-              Luxury Packaging Design
-            </h1>
-
-            <p className="text-xl text-gray-600 mb-10">
-              We create high-end packaging, branding systems, and offset printing solutions for modern global brands.
-            </p>
-
-            <a href="#services" className="bg-black text-white px-8 py-5 rounded-full font-semibold">
-              Explore Services
-            </a>
-          </div>
-
-          <img
-            src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1800&auto=format&fit=crop"
-            className="rounded-[40px] shadow-2xl h-[700px] object-cover"
-          />
-
+        <div>
+          <h1>Mukesh Graphics</h1>
         </div>
-      </section>
 
-      {/* ABOUT */}
-      <section id="about" className="py-40 px-6 bg-white">
-
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-
-          <div className="grid grid-cols-2 gap-6">
-
+        <div style={{ position:"relative", height:500 }}>
+          {HERO.map((src,i)=>(
             <img
-              src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1600&auto=format&fit=crop"
-              className="rounded-[35px] h-[520px] object-cover shadow-xl"
+              key={src}
+              src={src}
+              style={{
+                position:"absolute",
+                inset:0,
+                width:"100%",
+                height:"100%",
+                objectFit:"cover",
+                opacity: hi===i ? 1 : 0,
+                transition:"opacity 0.8s ease"
+              }}
             />
-
-            <img
-              src="https://images.unsplash.com/photo-1616627561836-6f2f1f5c3a51?q=80&w=1600&auto=format&fit=crop"
-              className="rounded-[35px] h-[520px] object-cover shadow-xl mt-20"
-            />
-
-          </div>
-
-          <div>
-
-            <p className="uppercase tracking-[6px] text-gray-500 mb-5">
-              About Us
-            </p>
-
-            <h2 className="text-5xl font-black mb-8">
-              Precision Craftsmanship for Modern Brands
-            </h2>
-
-            <p className="text-xl text-gray-600 mb-8">
-              Mukesh Graphics delivers luxury packaging, FMCG branding, pharmaceutical printing, and premium industrial design solutions.
-            </p>
-
-          </div>
-
+          ))}
         </div>
 
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-40 px-6">
-
-        <div className="max-w-7xl mx-auto text-center mb-20">
-          <p className="uppercase tracking-[6px] text-gray-500 mb-5">
-            Services
-          </p>
-          <h2 className="text-5xl font-black">What We Offer</h2>
-        </div>
-
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-
-          {[
-            {
-              title: "Packaging Design",
-              img: "https://images.unsplash.com/photo-1607344645866-009c320d1c1a?q=80&w=2000&auto=format&fit=crop",
-            },
-            {
-              title: "Offset Printing",
-              img: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=2000&auto=format&fit=crop",
-            },
-            {
-              title: "Brand Identity",
-              img: "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2000&auto=format&fit=crop",
-            },
-          ].map((s) => (
-            <div key={s.title} className="bg-white rounded-[35px] shadow-xl overflow-hidden hover:-translate-y-3 transition">
-
-              <img src={s.img} className="h-[340px] w-full object-cover" />
-
-              <div className="p-8">
-                <h3 className="text-3xl font-black mb-4">{s.title}</h3>
-                <p className="text-gray-600">
-                  Premium industrial solutions for modern brands.
-                </p>
-              </div>
-
-            </div>
-          ))}
-
-        </div>
-
+      <section id="services">
+        {SERVICES.map(s=>(
+          <div key={s.title}>
+            <img src={s.img} style={{ width:"100%", height:200, objectFit:"cover" }} />
+            <h3>{s.title}</h3>
+          </div>
+        ))}
       </section>
 
       {/* PORTFOLIO */}
-      <section id="portfolio" className="py-40 px-6 bg-white">
-
-        <div className="max-w-7xl mx-auto text-center mb-20">
-          <h2 className="text-5xl font-black">Our Work</h2>
-        </div>
-
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
-
-          {[
-            "https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?q=80&w=2000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=2000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2000&auto=format&fit=crop",
-          ].map((img) => (
-            <img
-              key={img}
-              src={img}
-              className="rounded-[30px] shadow-xl h-[360px] object-cover"
-            />
-          ))}
-
-        </div>
-
+      <section id="portfolio">
+        {PORTFOLIO.map(p=>(
+          <img key={p.img} src={p.img} style={{ width:300 }} />
+        ))}
       </section>
 
       {/* CLIENTS */}
-      <section id="clients" className="py-40 px-6">
-
-        <div className="max-w-7xl mx-auto text-center mb-20">
-          <h2 className="text-5xl font-black">Trusted By</h2>
-        </div>
-
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
-
-          {[
-            { name: "Sun Pharma", logo: "https://logo.clearbit.com/sunpharma.com" },
-            { name: "Cipla", logo: "https://logo.clearbit.com/cipla.com" },
-            { name: "Zydus", logo: "https://logo.clearbit.com/zyduslife.com" },
-            { name: "Torrent Pharma", logo: "https://logo.clearbit.com/torrentpharma.com" },
-            { name: "Ajanta Pharma", logo: "https://logo.clearbit.com/ajantapharma.com" },
-            { name: "Alembic Pharma", logo: "https://logo.clearbit.com/alembicpharmaceuticals.com" },
-            { name: "Intas Pharma", logo: "https://logo.clearbit.com/intaspharma.com" },
-            { name: "Lupin", logo: "https://logo.clearbit.com/lupin.com" },
-          ].map((c) => (
-            <div key={c.name} className="bg-white p-8 rounded-[30px] shadow-xl flex items-center justify-center">
-
-              <img
-                src={c.logo}
-                alt={c.name}
-                className="h-12 object-contain"
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                }}
-              />
-
-              {/* fallback text if logo fails */}
-              <span className="text-sm font-bold text-gray-500">
-                {c.name}
-              </span>
-
-            </div>
-          ))}
-
-        </div>
-
+      <section id="clients">
+        {CLIENTS.map(c=>(
+          <div key={c.name}>
+            <img
+              src={c.logo}
+              alt={c.name}
+              style={{ height:40 }}
+              onError={(e)=>{
+                e.currentTarget.style.display="none";
+              }}
+            />
+            <span>{c.name}</span>
+          </div>
+        ))}
       </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="py-40 px-6 bg-white">
-
-        <div className="max-w-4xl mx-auto text-center mb-16">
-
-          <h2 className="text-5xl font-black mb-6">
-            Let’s Build Something Premium
-          </h2>
-
-          <p className="text-xl text-gray-600">
-            Contact us for luxury packaging & branding solutions.
-          </p>
-
-        </div>
-
-        <div className="max-w-3xl mx-auto bg-[#f7f8fa] p-10 rounded-[35px] shadow-2xl">
-
-          <div className="text-center mb-10 text-gray-600">
-            📞 +91 9426272081 <br />
-            ✉ info@mukeshgraphics.com <br />
-            📍 Bhavnagar, Gujarat
-          </div>
-
-          <div className="space-y-4">
-
-            <input className="w-full p-5 rounded-xl border" placeholder="Your Name" />
-            <input className="w-full p-5 rounded-xl border" placeholder="Your Email" />
-            <textarea rows="5" className="w-full p-5 rounded-xl border" placeholder="Your Message" />
-
-            <button className="w-full bg-black text-white py-4 rounded-full font-semibold">
-              Send Message
-            </button>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* FOOTER */}
-      <footer className="bg-white border-t border-black/10 py-16 px-6">
-
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
-
-          <div>
-            <h2 className="text-3xl font-black mb-5">
-              Mukesh Graphics
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Premium packaging and printing experiences with modern luxury aesthetics.
-            </p>
-          </div>
-
-        </div>
-
-        <div className="border-t border-black/10 mt-12 pt-6 text-center text-gray-500">
-          © 2026 Mukesh Graphics. All Rights Reserved.
-        </div>
-
-      </footer>
 
     </main>
   );
