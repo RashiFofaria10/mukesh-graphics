@@ -2,13 +2,15 @@
 
 export default function Page() {
   return (
-    <main className="bg-[#f7f8fa] text-[#111] overflow-hidden">
+    <main className="bg-[#f6f7fb] text-[#111] overflow-hidden">
 
       {/* NAVBAR */}
       <header className="fixed top-5 left-0 w-full z-50 flex justify-center px-4">
         <div className="w-full max-w-7xl bg-white/70 backdrop-blur-xl border shadow-xl rounded-full px-8 py-5 flex items-center justify-between">
 
-          <h1 className="text-2xl font-black">Mukesh Graphics</h1>
+          <h1 className="text-2xl font-black tracking-wide">
+            Mukesh Graphics
+          </h1>
 
           <nav className="hidden md:flex gap-8 text-sm font-semibold text-gray-700">
             <a href="#home">Home</a>
@@ -35,15 +37,15 @@ export default function Page() {
 
           <div>
             <p className="uppercase tracking-[6px] text-gray-500 mb-6">
-              Premium Printing Studio
+              Premium Packaging & Branding Studio
             </p>
 
             <h1 className="text-6xl md:text-8xl font-black leading-[1.05] mb-8 bg-gradient-to-r from-black to-gray-500 text-transparent bg-clip-text">
-              Luxury Packaging Design
+              Luxury Design Experiences
             </h1>
 
             <p className="text-xl text-gray-600 mb-10">
-              We build premium packaging, branding systems and industrial print solutions for modern brands.
+              We create premium packaging, branding systems, and industrial printing solutions for modern global brands.
             </p>
 
             <a href="#services" className="bg-black text-white px-8 py-5 rounded-full font-semibold">
@@ -52,8 +54,8 @@ export default function Page() {
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=1800&auto=format&fit=crop"
-            className="rounded-[40px] shadow-2xl h-[720px] object-cover"
+            src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop"
+            className="rounded-[40px] shadow-2xl h-[700px] object-cover"
           />
 
         </div>
@@ -66,12 +68,12 @@ export default function Page() {
           <div className="grid grid-cols-2 gap-6">
 
             <img
-              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1600&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?q=80&w=1600&auto=format&fit=crop"
               className="rounded-[35px] h-[520px] object-cover shadow-xl"
             />
 
             <img
-              src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=1600&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1600&auto=format&fit=crop"
               className="rounded-[35px] h-[520px] object-cover shadow-xl mt-20"
             />
 
@@ -83,23 +85,27 @@ export default function Page() {
             </p>
 
             <h2 className="text-5xl font-black mb-8">
-              Precision Craftsmanship for Modern Brands
+              Precision Craftsmanship for Premium Brands
             </h2>
 
             <p className="text-xl text-gray-600 mb-8">
-              Mukesh Graphics delivers luxury packaging, FMCG branding, pharmaceutical printing and premium design solutions.
+              We specialize in luxury packaging design, FMCG branding, pharmaceutical cartons, and high-end offset printing solutions.
             </p>
 
             <div className="space-y-5">
 
-              <div className="bg-[#f7f8fa] p-6 rounded-[25px] shadow-lg">
-                <h3 className="text-2xl font-black mb-2">Modern Machines</h3>
-                <p className="text-gray-600">Advanced German & Japanese printing systems.</p>
+              <div className="bg-[#f6f7fb] p-6 rounded-[25px] shadow-lg">
+                <h3 className="text-2xl font-black mb-2">Advanced Production</h3>
+                <p className="text-gray-600">
+                  Industrial-grade printing with modern automation systems.
+                </p>
               </div>
 
-              <div className="bg-[#f7f8fa] p-6 rounded-[25px] shadow-lg">
+              <div className="bg-[#f6f7fb] p-6 rounded-[25px] shadow-lg">
                 <h3 className="text-2xl font-black mb-2">Luxury Finishing</h3>
-                <p className="text-gray-600">Foil, embossing, UV & premium detailing.</p>
+                <p className="text-gray-600">
+                  Foil stamping, embossing, UV coating & premium detailing.
+                </p>
               </div>
 
             </div>
@@ -123,15 +129,15 @@ export default function Page() {
           {[
             {
               title: "Luxury Packaging",
-              img: "https://images.unsplash.com/photo-1622554665555-1e9c3b6f2a8f?q=80&w=1800&auto=format&fit=crop",
+              img: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1600&auto=format&fit=crop",
             },
             {
               title: "Offset Printing",
-              img: "https://images.unsplash.com/photo-1616627561836-6f2f1f5c3a51?q=80&w=1800&auto=format&fit=crop",
+              img: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?q=80&w=1600&auto=format&fit=crop",
             },
             {
               title: "Brand Identity",
-              img: "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1800&auto=format&fit=crop",
+              img: "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1600&auto=format&fit=crop",
             },
           ].map((s) => (
             <div key={s.title} className="bg-white rounded-[35px] shadow-xl overflow-hidden hover:-translate-y-3 transition">
@@ -141,7 +147,7 @@ export default function Page() {
               <div className="p-8">
                 <h3 className="text-3xl font-black mb-4">{s.title}</h3>
                 <p className="text-gray-600">
-                  Premium industrial solutions crafted for global brands.
+                  Premium industrial-grade solutions for modern brands.
                 </p>
               </div>
 
@@ -161,15 +167,15 @@ export default function Page() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
 
           {[
-            "https://images.unsplash.com/photo-1520975916090-3105956dac38",
-            "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
-            "https://images.unsplash.com/photo-1526481280695-3c687fd5432c",
-            "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+            "https://images.unsplash.com/photo-1598032895397-b9472444bf93?q=80&w=1600",
+            "https://images.unsplash.com/photo-1622554665555-1e9c3b6f2a8f?q=80&w=1600",
+            "https://images.unsplash.com/photo-1616627561836-6f2f1f5c3a51?q=80&w=1600",
+            "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1600",
           ].map((img) => (
             <img
               key={img}
               src={img}
-              className="rounded-[30px] shadow-xl h-[350px] object-cover"
+              className="rounded-[30px] shadow-xl h-[360px] object-cover"
             />
           ))}
 
@@ -200,16 +206,16 @@ export default function Page() {
         <div className="max-w-4xl mx-auto text-center mb-16">
 
           <h2 className="text-5xl font-black mb-6">
-            Let’s Work Together
+            Let’s Build Something Premium
           </h2>
 
           <p className="text-xl text-gray-600">
-            Contact us for luxury packaging and branding solutions.
+            Contact us for luxury packaging & branding solutions.
           </p>
 
         </div>
 
-        <div className="max-w-3xl mx-auto bg-[#f7f8fa] p-10 rounded-[35px] shadow-2xl">
+        <div className="max-w-3xl mx-auto bg-[#f6f7fb] p-10 rounded-[35px] shadow-2xl">
 
           <div className="text-center mb-10 text-gray-600">
             📞 +91 9426272081 <br />
@@ -219,11 +225,11 @@ export default function Page() {
 
           <div className="space-y-4">
 
-            <input className="w-full p-5 rounded-xl border" placeholder="Name" />
-            <input className="w-full p-5 rounded-xl border" placeholder="Email" />
-            <textarea rows="5" className="w-full p-5 rounded-xl border" placeholder="Message" />
+            <input className="w-full p-5 rounded-xl border" placeholder="Your Name" />
+            <input className="w-full p-5 rounded-xl border" placeholder="Your Email" />
+            <textarea rows="5" className="w-full p-5 rounded-xl border" placeholder="Your Message" />
 
-            <button className="w-full bg-black text-white py-4 rounded-full font-semibold">
+            <button className="w-full bg-black text-white py-4 rounded-full font-semibold hover:scale-105 transition">
               Send Message
             </button>
 
