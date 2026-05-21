@@ -134,15 +134,15 @@ export default function Page() {
           {[
             {
               title: "Packaging Design",
-              img: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=1600&auto=format&fit=crop",
+              img: "https://picsum.photos/seed/packaging1/1200/800",
             },
             {
               title: "Offset Printing",
-              img: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?q=80&w=1600&auto=format&fit=crop",
+              img: "https://picsum.photos/seed/printing1/1200/800",
             },
             {
               title: "Brand Identity",
-              img: "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1600&auto=format&fit=crop",
+              img: "https://picsum.photos/seed/branding1/1200/800",
             },
           ].map((s) => (
             <div key={s.title} className="bg-white rounded-[35px] shadow-xl overflow-hidden hover:-translate-y-3 transition">
@@ -173,10 +173,10 @@ export default function Page() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
 
           {[
-            "https://images.unsplash.com/photo-1598032895397-b9472444bf93?q=80&w=1600&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1622554665555-1e9c3b6f2a8f?q=80&w=1600&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1616627561836-6f2f1f5c3a51?q=80&w=1600&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1600&auto=format&fit=crop",
+            "https://picsum.photos/seed/work1/1200/800",
+            "https://picsum.photos/seed/work2/1200/800",
+            "https://picsum.photos/seed/work3/1200/800",
+            "https://picsum.photos/seed/work4/1200/800",
           ].map((img) => (
             <img
               key={img}
@@ -198,9 +198,18 @@ export default function Page() {
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
 
-          {["Sun Pharma", "Zydus", "Cipla", "Nestlé", "Amul", "Cadbury", "Torrent", "Ajanta"].map((c) => (
-            <div key={c} className="bg-white p-10 rounded-[30px] shadow-xl font-black text-center">
-              {c}
+          {[
+            { name: "Sun Pharma", logo: "https://logo.clearbit.com/sunpharma.com" },
+            { name: "Zydus", logo: "https://logo.clearbit.com/zyduslife.com" },
+            { name: "Cipla", logo: "https://logo.clearbit.com/cipla.com" },
+            { name: "Nestlé", logo: "https://logo.clearbit.com/nestle.in" },
+            { name: "Amul", logo: "https://logo.clearbit.com/amul.com" },
+            { name: "Cadbury", logo: "https://logo.clearbit.com/cadbury.co.uk" },
+            { name: "Torrent", logo: "https://logo.clearbit.com/torrentpharma.com" },
+            { name: "Ajanta", logo: "https://logo.clearbit.com/ajantapharma.com" },
+          ].map((c) => (
+            <div key={c.name} className="bg-white p-8 rounded-[30px] shadow-xl flex items-center justify-center">
+              <img src={c.logo} alt={c.name} className="h-12 object-contain" />
             </div>
           ))}
 
@@ -208,7 +217,7 @@ export default function Page() {
 
       </section>
 
-      {/* CONTACT (FIXED - NOT SIDE BY SIDE) */}
+      {/* CONTACT */}
       <section id="contact" className="py-40 px-6 bg-white">
 
         <div className="max-w-4xl mx-auto text-center mb-16">
@@ -247,7 +256,7 @@ export default function Page() {
 
       </section>
 
-      {/* FOOTER (ORIGINAL STYLE RESTORED) */}
+      {/* FOOTER */}
       <footer className="bg-white border-t border-black/10 py-16 px-6">
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
