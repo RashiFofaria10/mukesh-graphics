@@ -95,24 +95,6 @@ export default function Page() {
               Mukesh Graphics delivers luxury packaging, FMCG branding, pharmaceutical printing, and premium industrial design solutions.
             </p>
 
-            <div className="space-y-5">
-
-              <div className="bg-[#f7f8fa] p-6 rounded-[25px] shadow-lg">
-                <h3 className="text-2xl font-black mb-2">Modern Machines</h3>
-                <p className="text-gray-600">
-                  Advanced printing systems for industrial-grade quality.
-                </p>
-              </div>
-
-              <div className="bg-[#f7f8fa] p-6 rounded-[25px] shadow-lg">
-                <h3 className="text-2xl font-black mb-2">Luxury Finishing</h3>
-                <p className="text-gray-600">
-                  Foil stamping, embossing, UV coating & premium detailing.
-                </p>
-              </div>
-
-            </div>
-
           </div>
 
         </div>
@@ -134,15 +116,15 @@ export default function Page() {
           {[
             {
               title: "Packaging Design",
-              img: "https://picsum.photos/seed/packaging1/1200/800",
+              img: "https://images.unsplash.com/photo-1607344645866-009c320d1c1a?q=80&w=2000&auto=format&fit=crop",
             },
             {
               title: "Offset Printing",
-              img: "https://picsum.photos/seed/printing1/1200/800",
+              img: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=2000&auto=format&fit=crop",
             },
             {
               title: "Brand Identity",
-              img: "https://picsum.photos/seed/branding1/1200/800",
+              img: "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2000&auto=format&fit=crop",
             },
           ].map((s) => (
             <div key={s.title} className="bg-white rounded-[35px] shadow-xl overflow-hidden hover:-translate-y-3 transition">
@@ -173,10 +155,10 @@ export default function Page() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
 
           {[
-            "https://picsum.photos/seed/work1/1200/800",
-            "https://picsum.photos/seed/work2/1200/800",
-            "https://picsum.photos/seed/work3/1200/800",
-            "https://picsum.photos/seed/work4/1200/800",
+            "https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?q=80&w=2000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=2000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2000&auto=format&fit=crop",
           ].map((img) => (
             <img
               key={img}
@@ -200,16 +182,30 @@ export default function Page() {
 
           {[
             { name: "Sun Pharma", logo: "https://logo.clearbit.com/sunpharma.com" },
-            { name: "Zydus", logo: "https://logo.clearbit.com/zyduslife.com" },
             { name: "Cipla", logo: "https://logo.clearbit.com/cipla.com" },
-            { name: "Nestlé", logo: "https://logo.clearbit.com/nestle.in" },
-            { name: "Amul", logo: "https://logo.clearbit.com/amul.com" },
-            { name: "Cadbury", logo: "https://logo.clearbit.com/cadbury.co.uk" },
-            { name: "Torrent", logo: "https://logo.clearbit.com/torrentpharma.com" },
-            { name: "Ajanta", logo: "https://logo.clearbit.com/ajantapharma.com" },
+            { name: "Zydus", logo: "https://logo.clearbit.com/zyduslife.com" },
+            { name: "Torrent Pharma", logo: "https://logo.clearbit.com/torrentpharma.com" },
+            { name: "Ajanta Pharma", logo: "https://logo.clearbit.com/ajantapharma.com" },
+            { name: "Alembic Pharma", logo: "https://logo.clearbit.com/alembicpharmaceuticals.com" },
+            { name: "Intas Pharma", logo: "https://logo.clearbit.com/intaspharma.com" },
+            { name: "Lupin", logo: "https://logo.clearbit.com/lupin.com" },
           ].map((c) => (
             <div key={c.name} className="bg-white p-8 rounded-[30px] shadow-xl flex items-center justify-center">
-              <img src={c.logo} alt={c.name} className="h-12 object-contain" />
+
+              <img
+                src={c.logo}
+                alt={c.name}
+                className="h-12 object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+
+              {/* fallback text if logo fails */}
+              <span className="text-sm font-bold text-gray-500">
+                {c.name}
+              </span>
+
             </div>
           ))}
 
@@ -268,29 +264,6 @@ export default function Page() {
             <p className="text-gray-600 leading-relaxed">
               Premium packaging and printing experiences with modern luxury aesthetics.
             </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-black mb-5">
-              Quick Links
-            </h3>
-            <div className="space-y-3 text-gray-600">
-              <p><a href="#home">Home</a></p>
-              <p><a href="#about">About</a></p>
-              <p><a href="#services">Services</a></p>
-              <p><a href="#contact">Contact</a></p>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-black mb-5">
-              Contact
-            </h3>
-            <div className="space-y-3 text-gray-600">
-              <p>📞 +91 9426272081</p>
-              <p>✉ info@mukeshgraphics.com</p>
-              <p>📍 Bhavnagar, Gujarat</p>
-            </div>
           </div>
 
         </div>
