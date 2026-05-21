@@ -1,3 +1,5 @@
+// src/app/page.js
+
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 
@@ -19,11 +21,11 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
-        <div className="relative z-10 text-center px-6 max-w-6xl">
+        <div className="relative z-10 text-center px-6 max-w-6xl text-white">
 
-          <p className="uppercase tracking-[8px] text-gray-600 mb-8 text-sm">
+          <p className="uppercase tracking-[8px] mb-8 text-sm">
             Premium Printing & Packaging Studio
           </p>
 
@@ -33,7 +35,7 @@ export default function Home() {
             That Feels Premium
           </h1>
 
-          <p className="text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed">
             Luxury packaging, innovative printing and modern branding
             experiences designed for ambitious businesses.
           </p>
@@ -42,14 +44,14 @@ export default function Home() {
 
             <a
               href="#services"
-              className="bg-black text-white px-10 py-5 rounded-full hover:scale-105 transition duration-300"
+              className="bg-white text-black px-10 py-5 rounded-full hover:scale-105 transition duration-300"
             >
               Explore Services
             </a>
 
             <a
               href="#portfolio"
-              className="border border-black px-10 py-5 rounded-full hover:bg-black hover:text-white transition duration-300"
+              className="border border-white px-10 py-5 rounded-full hover:bg-white hover:text-black transition duration-300"
             >
               View Portfolio
             </a>
@@ -76,7 +78,7 @@ export default function Home() {
 
           <div>
 
-            <p className="uppercase tracking-[5px] text-gray-500 mb-5">
+            <p className="uppercase tracking-[5px] text-orange-500 mb-5">
               About Us
             </p>
 
@@ -132,7 +134,7 @@ export default function Home() {
 
           <div className="text-center mb-24">
 
-            <p className="uppercase tracking-[5px] text-gray-500 mb-4">
+            <p className="uppercase tracking-[5px] text-orange-500 mb-4">
               Services
             </p>
 
@@ -287,7 +289,7 @@ export default function Home() {
       {/* PROCESS */}
       <section
         id="process"
-        className="py-32 px-6 bg-[#2a2a2a] text-white scroll-mt-32"
+        className="py-32 px-6 bg-[#111] text-white scroll-mt-32"
       >
 
         <div className="max-w-7xl mx-auto">
@@ -354,35 +356,13 @@ export default function Home() {
 
           <div className="text-center mb-24">
 
-            <p className="uppercase tracking-[5px] text-gray-500 mb-4">
+            <p className="uppercase tracking-[5px] text-orange-500 mb-4">
               Portfolio
             </p>
 
             <h2 className="text-5xl md:text-7xl font-black">
               Featured Projects
             </h2>
-
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-
-            <img
-              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070&auto=format&fit=crop"
-              alt=""
-              className="rounded-[35px] h-[500px] w-full object-cover"
-            />
-
-            <img
-              src="https://images.unsplash.com/photo-1516321310764-8d5a5f4c2d0f?q=80&w=2070&auto=format&fit=crop"
-              alt=""
-              className="rounded-[35px] h-[500px] w-full object-cover"
-            />
-
-            <img
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2070&auto=format&fit=crop"
-              alt=""
-              className="rounded-[35px] h-[500px] w-full object-cover"
-            />
 
           </div>
 
@@ -477,21 +457,6 @@ export default function Home() {
         </div>
 
       </section>
-
-      {/* WHATSAPP BUTTON */}
-      <a
-        href="https://wa.me/919999999999"
-        target="_blank"
-        className="fixed bottom-6 right-6 z-[100] w-16 h-16 rounded-full bg-green-500 flex items-center justify-center shadow-2xl hover:scale-110 transition duration-300"
-      >
-
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-          alt=""
-          className="w-9 h-9"
-        />
-
-      </a>
 
       <Footer />
 
