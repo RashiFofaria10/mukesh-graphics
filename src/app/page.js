@@ -36,23 +36,18 @@ export default function HomePage() {
               Clients
             </a>
 
-            <a href="#testimonials" className="hover:text-gray-500 transition">
-              Testimonials
-            </a>
-
-            <a href="#faq" className="hover:text-gray-500 transition">
-              FAQ
-            </a>
-
             <a href="#contact" className="hover:text-gray-500 transition">
               Contact
             </a>
 
           </nav>
 
-          <button className="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#222] hover:scale-105 transition duration-300">
+          <a
+            href="#contact"
+            className="bg-black text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#222] hover:scale-105 transition duration-300"
+          >
             Book Service
-          </button>
+          </a>
 
         </div>
 
@@ -74,7 +69,7 @@ export default function HomePage() {
             </p>
 
             <h1 className="text-6xl md:text-8xl font-black leading-[1.05] mb-8 bg-gradient-to-r from-black to-gray-500 text-transparent bg-clip-text">
-              Minimal Luxury Packaging Solutions
+              Luxury Packaging Solutions
             </h1>
 
             <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
@@ -83,13 +78,19 @@ export default function HomePage() {
 
             <div className="flex gap-5 flex-wrap">
 
-              <button className="bg-black text-white px-8 py-5 rounded-full font-semibold hover:bg-[#222] hover:scale-105 transition duration-300">
+              <a
+                href="#portfolio"
+                className="bg-black text-white px-8 py-5 rounded-full font-semibold hover:bg-[#222] hover:scale-105 transition duration-300"
+              >
                 Explore Work
-              </button>
+              </a>
 
-              <button className="border border-black/10 bg-white px-8 py-5 rounded-full font-semibold hover:bg-gray-100 hover:scale-105 transition duration-300">
+              <a
+                href="#contact"
+                className="border border-black/10 bg-white px-8 py-5 rounded-full font-semibold hover:bg-gray-100 hover:scale-105 transition duration-300"
+              >
                 Contact Us
-              </button>
+              </a>
 
             </div>
 
@@ -261,41 +262,11 @@ export default function HomePage() {
 
       </section>
 
-      {/* STATS */}
-
-      <section className="py-40 px-6">
-
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
-
-          <div className="bg-white rounded-[35px] p-12 shadow-xl text-center">
-            <h2 className="text-6xl font-black mb-4">15+</h2>
-            <p className="text-gray-600 text-lg">Years Experience</p>
-          </div>
-
-          <div className="bg-white rounded-[35px] p-12 shadow-xl text-center">
-            <h2 className="text-6xl font-black mb-4">500+</h2>
-            <p className="text-gray-600 text-lg">Projects Completed</p>
-          </div>
-
-          <div className="bg-white rounded-[35px] p-12 shadow-xl text-center">
-            <h2 className="text-6xl font-black mb-4">100+</h2>
-            <p className="text-gray-600 text-lg">Clients</p>
-          </div>
-
-          <div className="bg-white rounded-[35px] p-12 shadow-xl text-center">
-            <h2 className="text-6xl font-black mb-4">24/7</h2>
-            <p className="text-gray-600 text-lg">Support</p>
-          </div>
-
-        </div>
-
-      </section>
-
       {/* CLIENTS */}
 
       <section
         id="clients"
-        className="py-40 px-6 bg-white"
+        className="py-40 px-6"
       >
 
         <div className="max-w-7xl mx-auto text-center">
@@ -310,10 +281,19 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-4 gap-10">
 
-            {["Nestle", "Amul", "Cadbury", "Reliance"].map((client) => (
+            {[
+              "Sun Pharma",
+              "Torrent Pharma",
+              "Zydus",
+              "Amul",
+              "Cadbury",
+              "Nestlé",
+              "Cipla",
+              "Ajanta Pharma",
+            ].map((client) => (
               <div
                 key={client}
-                className="bg-[#f7f8fa] rounded-[30px] p-14 shadow-lg text-3xl font-black hover:-translate-y-2 transition duration-500"
+                className="bg-white rounded-[30px] p-12 shadow-lg text-2xl font-black hover:-translate-y-2 transition duration-500"
               >
                 {client}
               </div>
@@ -325,66 +305,10 @@ export default function HomePage() {
 
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* CONTACT */}
 
       <section
-        id="testimonials"
-        className="py-40 px-6"
-      >
-
-        <div className="max-w-7xl mx-auto">
-
-          <div className="text-center mb-20">
-
-            <p className="uppercase tracking-[5px] text-gray-500 font-semibold mb-5">
-              TESTIMONIALS
-            </p>
-
-            <h2 className="text-5xl font-black">
-              Client Experiences
-            </h2>
-
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-10">
-
-            <div className="bg-white rounded-[35px] p-10 shadow-xl">
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                “Excellent packaging quality and premium service experience.”
-              </p>
-              <h3 className="text-2xl font-black">
-                Rajesh Patel
-              </h3>
-            </div>
-
-            <div className="bg-white rounded-[35px] p-10 shadow-xl">
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                “Professional printing solutions with luxury aesthetics.”
-              </p>
-              <h3 className="text-2xl font-black">
-                Amit Shah
-              </h3>
-            </div>
-
-            <div className="bg-white rounded-[35px] p-10 shadow-xl">
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                “Outstanding branding and industrial packaging services.”
-              </p>
-              <h3 className="text-2xl font-black">
-                Neha Mehta
-              </h3>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* FAQ */}
-
-      <section
-        id="faq"
+        id="contact"
         className="py-40 px-6 bg-white"
       >
 
@@ -393,63 +317,46 @@ export default function HomePage() {
           <div className="text-center mb-20">
 
             <p className="uppercase tracking-[5px] text-gray-500 font-semibold mb-5">
-              FAQ
+              CONTACT
             </p>
 
-            <h2 className="text-5xl font-black">
-              Frequently Asked Questions
+            <h2 className="text-5xl font-black mb-6">
+              Let’s Build Something Premium
             </h2>
 
-          </div>
-
-          <div className="space-y-8">
-
-            <div className="bg-[#f7f8fa] rounded-[30px] p-8 shadow-lg">
-              <h3 className="text-2xl font-black mb-4">
-                What services do you provide?
-              </h3>
-              <p className="text-gray-600 text-lg">
-                We provide premium printing, packaging and branding solutions.
-              </p>
-            </div>
-
-            <div className="bg-[#f7f8fa] rounded-[30px] p-8 shadow-lg">
-              <h3 className="text-2xl font-black mb-4">
-                Do you provide industrial packaging?
-              </h3>
-              <p className="text-gray-600 text-lg">
-                Yes, we specialize in FMCG and pharmaceutical packaging.
-              </p>
-            </div>
+            <p className="text-xl text-gray-600">
+              Get in touch for packaging and printing solutions.
+            </p>
 
           </div>
 
-        </div>
+          <div className="bg-[#f7f8fa] rounded-[40px] p-12 shadow-xl">
 
-      </section>
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
 
-      {/* CONTACT */}
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="p-5 rounded-2xl border border-black/10 outline-none"
+              />
 
-      <section
-        id="contact"
-        className="py-40 px-6"
-      >
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="p-5 rounded-2xl border border-black/10 outline-none"
+              />
 
-        <div className="max-w-5xl mx-auto text-center">
+            </div>
 
-          <p className="uppercase tracking-[5px] text-gray-500 font-semibold mb-5">
-            CONTACT
-          </p>
+            <textarea
+              rows="6"
+              placeholder="Your Message"
+              className="w-full p-5 rounded-2xl border border-black/10 outline-none mb-6"
+            />
 
-          <h2 className="text-5xl font-black mb-10">
-            Let’s Build Something Premium
-          </h2>
-
-          <div className="space-y-5 text-xl text-gray-600">
-
-            <p>📞 +91 9426272081</p>
-            <p>✉ info@mukeshgraphics.com</p>
-            <p>📍 Bhavnagar, Gujarat</p>
+            <button className="bg-black text-white px-10 py-5 rounded-full font-semibold hover:bg-[#222] transition">
+              Send Message
+            </button>
 
           </div>
 
@@ -459,8 +366,61 @@ export default function HomePage() {
 
       {/* FOOTER */}
 
-      <footer className="bg-white border-t border-black/5 py-10 text-center text-gray-500">
-        © 2026 Mukesh Graphics. All Rights Reserved.
+      <footer className="bg-white border-t border-black/10 py-16 px-6">
+
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+
+          <div>
+
+            <h2 className="text-3xl font-black mb-5">
+              Mukesh Graphics
+            </h2>
+
+            <p className="text-gray-600 leading-relaxed">
+              Premium printing, packaging and branding solutions with modern luxury aesthetics.
+            </p>
+
+          </div>
+
+          <div>
+
+            <h3 className="text-2xl font-black mb-5">
+              Quick Links
+            </h3>
+
+            <div className="space-y-3 text-gray-600">
+
+              <p><a href="#home">Home</a></p>
+              <p><a href="#about">About</a></p>
+              <p><a href="#services">Services</a></p>
+              <p><a href="#portfolio">Portfolio</a></p>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <h3 className="text-2xl font-black mb-5">
+              Contact
+            </h3>
+
+            <div className="space-y-3 text-gray-600">
+
+              <p>📞 +91 9426272081</p>
+              <p>✉ info@mukeshgraphics.com</p>
+              <p>📍 Bhavnagar, Gujarat</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="border-t border-black/10 mt-12 pt-6 text-center text-gray-500">
+          © 2026 Mukesh Graphics. All Rights Reserved.
+        </div>
+
       </footer>
 
     </main>
